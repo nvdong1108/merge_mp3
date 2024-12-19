@@ -1,54 +1,106 @@
 
 import datetime
+import time
 import os
+import re
+import uuid
+import whisper
+from googletrans import Translator
 
 
-def subtitels_all(audio_path):
-    model = whisper.load_model("base")
-    load_audio_file(audio_path)
-
-    result = model.transcribe(audio_path, word_timestamps=True)
-    buffer = ""
-    start_time = None
-
-    for segment in result['segments']:
-        text = segment['text']
-        end_time = segment['end']
-
-        # Thêm văn bản vào buffer
-        if start_time is None:
-            start_time = segment['start']
-        buffer += text + " "
-
-        # Tìm các câu kết thúc bằng dấu câu
-        sentences = re.split(r'([.?!])', buffer)
-        for i in range(0, len(sentences) - 1, 2):  # Lấy các cặp câu và dấu câu
-            full_sentence = sentences[i].strip() + sentences[i + 1]
-            subtitle = f"{start_time:.2f} -> {end_time:.2f}: {full_sentence}\n"
-            write_subtitle_to_file(subtitle)
-            start_time = None  # Reset thời gian bắt đầu
-        buffer = sentences[-1].strip()  # Câu chưa kết thúc (nếu có)
-
-    # Ghi câu còn lại trong buffer (nếu kết thúc đoạn)
-    if buffer:
-        subtitle = f"{start_time:.2f} -> {end_time:.2f}: {buffer}\n"
-        write_subtitle_to_file(subtitle)
-
-    print("Hoàn tất ghi phụ đề.")
-    return None, None
+def translate_text(text , language="vi", retries=3, wait_time=1):
+    if not text.strip():
+        return text
+    translator = Translator()
+    for attempt in range(retries):
+        try:
+            translated = translator.translate(text, dest=language)
+            if translated:
+                return translated.text
+        except Exception as e:
+            print(f"Attempt {attempt+1}/{retries} failed: {str(e)}")
+        if attempt < retries - 1:
+            time.sleep(wait_time) 
+            
+    return text      
 
 
-def write_subtitle_to_file(subtitles):
-    # Tạo tên file dựa trên thời gian hiện tại
-    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    output_file = f"assets/subtitle_{timestamp}.txt"
+def load_audio_file(audio_path):
+    try:
+        if not os.path.exists(audio_path):
+            raise FileNotFoundError(f"File audio not found: {audio_path}")
+        # audio_clip = AudioFileClip(audio_path)
+        return None
 
-    # Tạo thư mục nếu chưa tồn tại
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
+        return None
+
+    except Exception as e:
+        print(f"Error when open audio file : {e}")
+        return None
+    
+
+
+def write_subtitle_to_file(subtitles,file_name):
+    
+    output_file = f"assets/subtitle/{file_name}.txt"
+
+    
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
     try:
         with open(output_file, 'a', encoding='utf-8') as file:
-            file.write(subtitles)  # Ghi nội dung vào file
-        print(f"Subtitles written to: {output_file}")
+            file.write(subtitles) 
     except Exception as e:
         print(f"An error occurred while writing subtitles: {e}")
+
+
+def subtitels_all(audio_path , file_name):
+
+    model = whisper.load_model("base")
+
+    result = model.transcribe(audio_path, word_timestamps=True)
+    buffer = ""
+    start_time = None
+    segment_samples = ""
+
+    for segment in result['segments']:
+
+        for word_info in segment['words']:   
+            word = word_info['word']
+            segment_samples += word+ ""
+
+            if start_time is None:
+                start_time = word_info['start']
+
+            if re.search(r'[.!?]',word):
+                end_time = word_info['end']
+                line = f"{start_time:.2f} # {end_time:.2f} #  {segment_samples} # {translate_text(segment_samples)}\n"
+                write_subtitle_to_file(line,file_name)
+                segment_samples =""
+                start_time = None
+
+
+    if segment_samples.strip():
+        end_time = result['segments'][-1]['words'][-1]['end']
+        line = f"{start_time:.2f} # {end_time:.2f} #  {segment_samples} # {translate_text(segment_samples)}\n"
+        write_subtitle_to_file(line,file_name)
+
+    return None, None
+
+def main():
+    folder_path = r"assets\test\\" 
+    if not os.path.exists(folder_path):
+        print(f"Folder '{folder_path}' does not exist.")
+        return
+    
+    for file_name in os.listdir(folder_path):
+        if file_name.lower().endswith(".mp3"):
+            audio_path = os.path.join(folder_path, file_name)
+            file_name_without_extension = os.path.splitext(file_name)[0]
+            subtitels_all(audio_path, file_name_without_extension) 
+            print(f"Subtitle for {file_name} has been created.")
+
+if __name__ == "__main__":
+    main()    

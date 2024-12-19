@@ -24,3 +24,4 @@ Thumbs.db
 # Ignore environment files
 .env
 .env.*
+assets/
