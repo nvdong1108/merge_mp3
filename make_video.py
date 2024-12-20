@@ -5,6 +5,8 @@ import moviepy.editor as mp
 from googletrans import Translator
 from moviepy.config import change_settings
 from moviepy.editor import ImageClip, AudioFileClip, TextClip, CompositeVideoClip # type: ignore
+from moviepy.video.fx import fadein, fadeout
+
 change_settings({"IMAGEMAGICK_BINARY": r"C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe"})
 
 # timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
@@ -59,35 +61,43 @@ def process_video(audio_path, image_path, output_folder, file_name):
 
         end_time = subtitles[-1]['end'] 
         
-        rows = 0.05
-        for subtitle in subtitles:
-            
+        rows = 0
+        text_en = ""
+        for i, subtitle in enumerate( subtitles):
+            rows = rows + 0.1
 
-            text_en = subtitle['text_en']
+            text_en += subtitle['text_en'] + "\n"
             text_vn = subtitle['text_vn']
-
-            text_en_lines = text_en.splitlines()
-            text_vn_lines = text_vn.splitlines()
-
-            for text_line in text_en_lines:
-                text_clip_en = TextClip(text_line, fontsize=40, color='white', font='Arial', method='caption', size=(screen_width * 0.5, None))
-                text_clip_en = text_clip_en.set_position(('left', rows), relative=True).set_start(subtitle['start']).set_end(end_time)
-                text_clips.append(text_clip_en)
-                
-                rows = rows + 0.05
-
-
-            for text_line in text_vn_lines:
-                text_clip_vn = TextClip(text_line, fontsize=40, color='yellow', font='Arial', method='caption', size=(screen_width * 0.5, None))
-                text_clip_vn = text_clip_vn.set_position(('right', rows), relative=True).set_start(subtitle['start']).set_end(end_time)
-                text_clips.append(text_clip_vn)
-
-
-            if len(text_en) > 50 or len(text_vn) > 50:
-                rows = rows + 0.05
             
-            if re.search(r'[\n]',text_en) or re.search(r'[\n]',text_vn):
-                rows = rows + 0.05                
+
+            # text_clip_en = TextClip(text_en, fontsize=60
+            #                         , color='white'
+            #                         , font='Arial Black'
+            #                         , align='West'
+            #                         , method='caption'
+            #                         , size=(screen_width * 0.6, None))
+            # start_time_en = subtitle['start']- 1
+            # text_clip_en = text_clip_en.set_position(lambda t: ('left', start_pos_y - t * 100)).set_start(start_time_en).set_end(end_time)
+            # text_clips.append(text_clip_en)
+    
+        
+            text_clip_vn = TextClip(text_vn, fontsize=60, color='yellow', font='Comic Sans MS',align='West', method='caption', size=(screen_width * 0.5, None))
+            text_clip_vn = text_clip_vn.set_position(('right', rows), relative=True).set_start(subtitle['start']).set_end(end_time)
+            text_clips.append(text_clip_vn)
+
+        text_clip_en = TextClip(text_en, fontsize=70
+                                , color='white'
+                                , font='Arial Black'
+                                , align='West'
+                                , method='caption'
+                                , size=(screen_width * 0.6, None))
+        
+        start_pos_y = screen_height * 0.6
+        
+        text_clip_en = text_clip_en.set_position(lambda t: ('left', start_pos_y - t * 10)).set_start(0).set_end(end_time)
+        text_clips.append(text_clip_en)
+    
+
 
         video = CompositeVideoClip([image_clip] + text_clips)
         video.write_videofile(output_path, fps=24, threads=4)
