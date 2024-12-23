@@ -53,3 +53,8 @@ def merge_mp3_files(mp3_files):
             merge_mp3_files(mp3_files)
         else:
             print("No MP3 files found in the audio directory.")
+
+# fix bug: 
+into   .\venv\Lib\site-packages\whisper\__init__.py
+change : checkpoint = torch.load(fp, map_location=device)  -> checkpoint = torch.load(fp, map_location=device, weights_only=True)
+  
