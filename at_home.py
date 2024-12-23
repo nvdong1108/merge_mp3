@@ -50,6 +50,10 @@ def process_video(audio_path, image_path, output_folder, file_name):
         rows_pixes = 0     
         text_en = ""
 
+        space_two_line = 0.02
+        
+        
+
         for i, subtitle in enumerate( subtitles):
             
             text_en = subtitle['text_en']
@@ -60,14 +64,34 @@ def process_video(audio_path, image_path, output_folder, file_name):
                 # title
                 text_clip_en = TextClip(text_en, fontsize=90, color='#ade02f', font='Comic-Sans-MS-Bold', method='caption', align='North', size=((screen_width*0.6), None))
                 text_clip_en = text_clip_en.set_position(('center',rows),relative=True).set_start(0).set_end(end_all_video_time)
-            else:    
-                # rows = rows + 0.1                
+                
+                rows_pixes += text_clip_en.h
+                rows = round(rows_pixes / screen_height, 3) + space_two_line
+
+            elif i % 2 ==1 and  ( i !=3 or file_name !=  '05-location-2')  :   
+                # left 
                 text_clip_en = TextClip(text_en, fontsize=60, color='#eedfd8', font='Comic-Sans-MS', align='west', method='caption', size=(screen_width*0.96, None))
-                text_clip_en = text_clip_en.set_position((0.05, rows), relative=True).set_start(start_time).set_end(end_all_video_time)
+                text_clip_en = text_clip_en.set_position((0.02, rows), relative=True).set_start(start_time).set_end(end_all_video_time)
+                
+                if  ( i == 1 or i == 5 )  and file_name == '05-location-2'  :
+                    rows_pixes += text_clip_en.h
+                    rows = round(rows_pixes / screen_height, 3) + space_two_line
+            else:    
+                # right
+                text_clip_en = TextClip(text_en, fontsize=50, color='#eb8ee4'
+                                        , font='Comic-Sans-MS-Italic', align='West'
+                                        , method='caption', size=(screen_width*0.96, None))
+                if  i == 2 and file_name == '04-location':
+                    text_clip_en = text_clip_en.set_position((0.4, rows), relative=True).set_start(start_time).set_end(end_all_video_time)
+                elif file_name == '05-location-2':
+                    text_clip_en = text_clip_en.set_position((0.4, rows), relative=True).set_start(start_time).set_end(end_all_video_time)    
+                else:
+                    text_clip_en = text_clip_en.set_position((0.45, rows), relative=True).set_start(start_time).set_end(end_all_video_time)
+                
+                rows_pixes += text_clip_en.h
+                rows = round(rows_pixes / screen_height, 3) + space_two_line
             
-            rows_pixes += text_clip_en.h
-            rows = round(rows_pixes / screen_height, 3)
-            print(f"rows: {rows} % = {rows}")
+            
             text_clips.append(text_clip_en)
 
         video = CompositeVideoClip([image_clip] + text_clips)

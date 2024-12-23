@@ -46,9 +46,13 @@ def process_video(audio_path, image_path, output_folder, file_name):
 
         end_all_video_time = subtitles[-1]['end'] 
         
-        rows = 0
+        rows = 0.02
         rows_pixes = 0     
         text_en = ""
+
+        space_two_line = 0.02
+        
+        
 
         for i, subtitle in enumerate( subtitles):
             
@@ -58,16 +62,30 @@ def process_video(audio_path, image_path, output_folder, file_name):
             start_time = subtitle['start']
             if i == 0:
                 # title
-                text_clip_en = TextClip(text_en, fontsize=90, color='#ade02f', font='Comic-Sans-MS-Bold', method='caption', align='North', size=((screen_width*0.6), None))
+                text_clip_en = TextClip(text_en, fontsize=90, color='#ade02f', font='Comic-Sans-MS-Bold', method='caption', align='North', size=((screen_width), None))
                 text_clip_en = text_clip_en.set_position(('center',rows),relative=True).set_start(0).set_end(end_all_video_time)
+                rows_pixes += text_clip_en.h
+                rows = round(rows_pixes / screen_height, 3) + space_two_line
+
+            elif i % 2 ==1:   
+                # left 
+                text_clip_en = TextClip(text_en, fontsize=60, color='#eedfd8', font='Comic-Sans-MS', align='west', method='caption', size=(screen_width, None))
+                text_clip_en = text_clip_en.set_position((0.01, rows), relative=True).set_start(start_time).set_end(end_all_video_time)
+                
+                rows_pixes += text_clip_en.h
+                rows = round(rows_pixes / screen_height, 3) + 0.01
+
             else:    
-                # rows = rows + 0.1                
-                text_clip_en = TextClip(text_en, fontsize=60, color='#eedfd8', font='Comic-Sans-MS', align='west', method='caption', size=(screen_width*0.96, None))
+                # right
+                text_clip_en = TextClip(text_en, fontsize=50, color='#b1fb90', font='Comic-Sans-MS-Italic', align='West'
+                                        , method='caption', size=(screen_width, None))
+                
                 text_clip_en = text_clip_en.set_position((0.05, rows), relative=True).set_start(start_time).set_end(end_all_video_time)
+                
+                rows_pixes += text_clip_en.h
+                rows = round(rows_pixes / screen_height, 3) + space_two_line
             
-            rows_pixes += text_clip_en.h
-            rows = round(rows_pixes / screen_height, 3)
-            print(f"rows: {rows} % = {rows}")
+            
             text_clips.append(text_clip_en)
 
         video = CompositeVideoClip([image_clip] + text_clips)
@@ -79,7 +97,7 @@ def process_video(audio_path, image_path, output_folder, file_name):
 
 def main():
     audio_folder = r"assets\test"
-    image_path = r"assets\image\background_4.jpg"
+    image_path = r"assets\image\short_video.jpg"
     output_folder = r"assets\video_export" 
 
     if not os.path.exists(output_folder):
