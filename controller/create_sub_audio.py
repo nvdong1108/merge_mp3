@@ -9,7 +9,7 @@ from googletrans import Translator
 from pyannote.audio import Pipeline
 
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
-
+os.environ["SB_LOCAL_STRATEGY"] = "copy"
 
 def translate_text(text , language="vi", retries=3, wait_time=1):
     if not text.strip():
@@ -63,23 +63,21 @@ def subtitels_all(audio_path , file_name):
 
     model = whisper.load_model("base")
 
+    pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization",use_auth_token="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")
+    diarization = pipeline(audio_path)
 
-    # try:
-    #     pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization", use_auth_token="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")
-    #     diarization = pipeline(audio_path)
-    # except Exception as e:
-    #     print(f"Error when open audio file : {e}")    
-    # print(f"\n#################\n\n")
-    # speaker_segments = []
-    # for turn, _, speaker in diarization.itertracks(yield_label=True):
-    #     speaker_segments.append({
-    #         "start": turn.start,
-    #         "end": turn.end,
-    #         "speaker": speaker
-    #     })
+    speaker_segments = []
+    for turn, _, speaker in diarization.itertracks(yield_label=True):
+        speaker_segments.append({
+            "start": turn.start,
+            "end": turn.end,
+            "speaker": speaker
+        })
+
 
     result = model.transcribe(audio_path, word_timestamps=True)
     start_time = None
+    end_time_audio = result['segments'][-1]['words'][-1]['end']
     segment_samples = ""
 
     for  i,  segment in  enumerate(result['segments']):
@@ -92,15 +90,20 @@ def subtitels_all(audio_path , file_name):
                 start_time = word_info['start']
 
             if re.search(r'[.!?]',word):
+                
 
                 if i == 0:
                     speaker = "title"
-                elif re.search(r'[?]',word):
-                    speaker = "Q"    
+                    end_time = end_time_audio
                 else:
-                    speaker = "A"
-                    
-                end_time = word_info['end']
+                    speaker = "Unknown"
+                    end_time = word_info['end']
+                    for speaker_segment in speaker_segments:
+                        if start_time >= speaker_segment['start'] and end_time <= speaker_segment['end']:
+                            speaker = speaker_segment['speaker']
+                            print(f"speaker ===>> {speaker}")
+                            break    
+                
                 line = f"{speaker} # {start_time:.2f} # {end_time:.2f} # {segment_samples}\n"
                 write_subtitle_to_file(line,file_name)
                 segment_samples =""
@@ -115,13 +118,13 @@ def subtitels_all(audio_path , file_name):
     return None, None
 
 def main():
-    folder_path = r"assets\test\\" 
+    folder_path = r"assets\audio\input_wav" 
     if not os.path.exists(folder_path):
         print(f"Folder '{folder_path}' does not exist.")
         return
     
     for file_name in os.listdir(folder_path):
-        if file_name.lower().endswith(".mp3"):
+        if file_name.lower().endswith(".wav"):
             audio_path = os.path.join(folder_path, file_name)
             file_name_without_extension = os.path.splitext(file_name)[0]
             subtitels_all(audio_path, file_name_without_extension) 

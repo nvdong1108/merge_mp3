@@ -79,6 +79,7 @@ def process_video(audio_path, image_path, output_folder, file_name):
 
         text_clips = []
         subtitles = load_subtitles(file_name)
+        name_speaker = None
 
         
         rows = 0.02
@@ -92,7 +93,10 @@ def process_video(audio_path, image_path, output_folder, file_name):
                 text_clip_en = TextClip(subtitle['text_en'], fontsize=90, color='#d1d155',font='Comic-Sans-MS-Bold', method='caption',size=(screen_width, None))
                 text_clip_en = text_clip_en.set_position(('center',rows),relative=True).set_start(0).set_end(end_time_title)
             else:
-                if subtitle['speaker'] == "Q":
+                if name_speaker is None:
+                    name_speaker = subtitle['speaker']
+
+                if subtitle['speaker'] == name_speaker:
                     text_clip_en = TextClip(subtitle['text_en'], fontsize=55, color='white',font='Comic-Sans-MS', method='caption', align='West',size=(screen_width*0.99, None))
                     text_clip_en = text_clip_en.set_position(('left',rows),relative=True).set_start(subtitle['start']).set_end(subtitle['end'])
                 else:
@@ -116,21 +120,21 @@ def process_video(audio_path, image_path, output_folder, file_name):
             else:
                 end_time = subtitle['end']
                 # print(f"end_time_screen {end_time_screen} and end_time {end_time}")
-                if end_time < end_time_screen:
+                if end_time <= end_time_screen:
                      end_time = end_time_screen
                 else:
                     end_time = end_time_title
-                print(f"\n --------->>>>> end_time_screen {end_time_screen} and end_time {end_time}\n")
+                # print(f"\n --------->>>>> end_time_screen {end_time_screen} and end_time {end_time}\n")
 
-                if subtitle['speaker'] == "Q":
+                if subtitle['speaker'] == name_speaker:
                     text_clip_en = TextClip(subtitle['text_en'], fontsize=55, color='white',font='Comic-Sans-MS', method='caption', align='West',size=(screen_width*0.99, None))
                     text_clip_en = text_clip_en.set_position(('left',rows),relative=True).set_start(subtitle['start']).set_end(end_time)
                 else:
-                    text_clip_en = TextClip(subtitle['text_en'], fontsize=55, color='#b1d371',font='Comic-Sans-MS-Italic', method='caption', align='East',size=(screen_width*0.99 , None))
+                    text_clip_en = TextClip(subtitle['text_en'], fontsize=55, color='#fcc1de',font='Comic-Sans-MS-Italic', method='caption', align='East',size=(screen_width*0.99 , None))
                     text_clip_en = text_clip_en.set_position(('right',rows),relative=True).set_start(subtitle['start']).set_end(end_time)
 
             rows = round((rows + (text_clip_en.h / screen_height) ) ,2)
-            print(f"rows = {rows} {subtitle['text_en']}")
+            # print(f"rows = {rows} {subtitle['text_en']}")
             text_clips.append(text_clip_en)
             if rows >= 0.89:
                 rows = 0.09        
@@ -144,15 +148,15 @@ def process_video(audio_path, image_path, output_folder, file_name):
 
 
 def main():
-    audio_folder = r"assets\test"
+    audio_folder = r"assets\audio\test\\"
     image_path = r"assets\image\short_youtube.jpg"
-    output_folder = r"assets\video_export" 
+    output_folder = r"assets\video\output\\" 
 
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
     for audio_file in os.listdir(audio_folder):
-        if audio_file.lower().endswith(".mp3"):
+        if audio_file.lower().endswith(".wav"):
             audio_path = os.path.join(audio_folder, audio_file)
             file_name = os.path.splitext(audio_file)[0] 
             process_video(audio_path, image_path, output_folder, file_name)
