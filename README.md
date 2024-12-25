@@ -58,3 +58,6 @@ def merge_mp3_files(mp3_files):
 into   .\venv\Lib\site-packages\whisper\__init__.py
 change : checkpoint = torch.load(fp, map_location=device)  -> checkpoint = torch.load(fp, map_location=device, weights_only=True)
   
+
+# merged file mp4 
+ffmpeg -f concat -safe 0 -i filelist.txt -c copy assets/video/merged/merged_video_output.mp4

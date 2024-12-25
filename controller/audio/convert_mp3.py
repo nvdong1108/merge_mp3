@@ -89,10 +89,39 @@ def convert_all_mp3_to_wav(input_dir, output_dir,  speed=0.8):
     except Exception as e:
         print(f"Lỗi khi chuyển đổi: {e}")
 
+
+def cut_mp3(input_file, output_file, start_time, end_time):
+    """
+    Cắt file MP3 từ thời gian bắt đầu đến kết thúc.
+    
+    Args:
+        input_file (str): Đường dẫn đến file MP3 đầu vào.
+        output_file (str): Đường dẫn lưu file MP3 đầu ra.
+        start_time (int): Thời gian bắt đầu (tính bằng mili-giây).
+        end_time (int): Thời gian kết thúc (tính bằng mili-giây).
+    
+    Returns:
+        None
+    """
+    try:
+        # Đọc file MP3
+        audio = AudioSegment.from_file(input_file, format="mp3")
+        
+        # Cắt file theo thời gian
+        cut_audio = audio[start_time:end_time]
+        
+        # Lưu file MP3 đã cắt
+        cut_audio.export(output_file, format="mp3")
+        print(f"File MP3 đã được cắt và lưu tại: {output_file}")
+    except Exception as e:
+        print(f"Lỗi: {e}")
+
 # Đường dẫn thư mục
 # folder_path = r"assets\test\\" 
-input_directory = r"assets\audio\input_mp3\\"  # Thư mục chứa các tệp MP3
-output_directory = r"assets\audio\input_wav\\" 
+# input_directory = r"assets\audio\input_mp3\\" 
+# output_directory = r"assets\audio\input_wav\\" 
+# convert_all_mp3_to_wav(input_directory, output_directory)
 
-# Gọi hàm để chuyển đổi
-convert_all_mp3_to_wav(input_directory, output_directory)
+input_file = r"assets\audio\input_mp3\ielts-recent-actual-test-1-part-1.mp3"  # Thư mục chứa các tệp MP3
+output_file = r"assets\audio\input_wav\0_1650_ielts-recent-actual-test-1-part-1.mp3" 
+cut_mp3(input_file, output_file, 0, 17 * 1000)

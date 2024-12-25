@@ -94,13 +94,13 @@ def subtitels_all(audio_path , file_name):
     return None, None
 
 def main():
-    folder_path = r"assets\audio\input_wav" 
+    folder_path = r"assets\audio\test\\" 
     if not os.path.exists(folder_path):
         print(f"Folder '{folder_path}' does not exist.")
         return
     
     for file_name in os.listdir(folder_path):
-        if file_name.lower().endswith(".wav"):
+        if file_name.lower().endswith(".mp3"):
             audio_path = os.path.join(folder_path, file_name)
             file_name_without_extension = os.path.splitext(file_name)[0]
             subtitels_all(audio_path, file_name_without_extension) 
