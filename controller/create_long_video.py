@@ -18,15 +18,16 @@ change_settings({"IMAGEMAGICK_BINARY": r"C:\Program Files\ImageMagick-7.1.1-Q16-
 
 def load_subtitles(file_name):
     file_path = fr"assets\subtitle\{file_name}.txt"
+    print(f"================= >>>>>>  load_subtitles file_path: {file_path}")
     subtitles = []
     with open(file_path, 'r', encoding='utf-8') as file:
         for line in file:
             parts = line.strip().split(" # ")
-            if len(parts) > 0:
+            if len(parts) > 2:
                 # speaker = parts[0]
-                start_time = float(parts[0])
-                end_time = float(parts[1])
-                text = parts[2]
+                start_time = float(parts[0].strip())
+                end_time = float(parts[1].strip())
+                text = parts[2].strip()
                 subtitles.append({"start": start_time
                                   , "end": end_time
                                   , "text_en":text})
@@ -65,7 +66,7 @@ def process_video(audio_path, image_path, output_folder, file_name):
             text_clips.append(text_clip_en)
 
         video = CompositeVideoClip([image_clip] + text_clips)
-        video.write_videofile(output_path, fps=24, threads=4)
+        video.write_videofile(output_path, fps=24, threads=8)
 
     finally:
         audio_clip.close()

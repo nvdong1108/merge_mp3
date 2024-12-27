@@ -60,4 +60,4 @@ change : checkpoint = torch.load(fp, map_location=device)  -> checkpoint = torch
   
 
 # merged file mp4 
-ffmpeg -f concat -safe 0 -i filelist.txt -c copy assets/video/merged/merged_video_output.mp4
+ffmpeg -f concat -safe 0 -i filelist.txt -c copy assets/video/merged/merged_video_output_34.mp4
