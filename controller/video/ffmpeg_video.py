@@ -56,7 +56,7 @@ def write_to_file(file_path, content):
 
 def load_subtitles(file_name):
     file_path = fr"assets\subtitle\{file_name}.txt"
-    print(f"================= >>>>>>  load_subtitles file_path: {file_path}")
+    # print(f"================= >>>>>>  load_subtitles file_path: {file_path}")
     subtitles = []
     with open(file_path, 'r', encoding='utf-8') as file:
         for line in file:
@@ -72,7 +72,7 @@ def load_subtitles(file_name):
     return subtitles
 
 
-def create_video_with_audio(image_path, audio_path, output_video_path, fps=30, duration=5):
+def create_video_with_audio(image_path, audio_path, output_video_path, file_name,  fps=30, duration=5):
 
     """
     Tạo video từ các file ảnh trong thư mục.
@@ -82,27 +82,28 @@ def create_video_with_audio(image_path, audio_path, output_video_path, fps=30, d
     :param fps: Số khung hình mỗi giây của video (mặc định là 30)
     """
     drawtext_filters = []
-    subtitles = load_subtitles('0_1650_ielts-recent-actual-test-1-part-1')
-    font_list = fm.findSystemFonts(fontpaths=None, fontext='ttf')
-    print(f"font_list: {font_list}")
-    for i in range(len(subtitles)):
-        temp_file = f"textFile_{i}.txt"
-        if os.path.exists(temp_file):
-            os.remove(temp_file)
+    subtitles = load_subtitles(file_name)
 
+    # for i, subtitle in enumerate( subtitles):
+    #     text = subtitle['text_en']
+    #     wrapped_text = wrap_text(text, max_chars_per_line=50)
+    #     temp_file = f"{file_name}_{i}.txt"
+    #     write_to_file(temp_file, wrapped_text)
+
+    output_folder = rf"assets\subtitle\book\{file_name}"
+
+    if not os.path.exists(output_folder):
+        print(f"ERROR ------------ Creating folder: {output_folder}")
+    
     for i, subtitle in enumerate( subtitles):
-        text = subtitle['text_en']
-        print(f"text:\n {text}")
-        wrapped_text = wrap_text(text, max_chars_per_line=50)
-        temp_file = f"textFile_{i}.txt"
-        write_to_file(temp_file, wrapped_text)
-        
+        temp_file =  f"assets/subtitle/book/{file_name}/{file_name}_{i}.txt" 
+        # os.path.join(output_folder, f"{file_name}_{i}.txt")
+
+        # temp_file = f"{file_name}_{i}.txt"
         if i == 0:
-            drawtext_filter = f"drawtext=textfile={temp_file}:x=(w-text_w)/2:y=(h*0.03):fontcolor=#d1d155:fontfile='C\:\\Windows\\Fonts\\comicbd.ttf': fontsize=70:enable='between(t,{subtitle['start']},{subtitle['end']})'"
-            # title
-            # drawtext_filter = f"drawtext=text='{subtitle['text_en']}':x=(w-text_w)/2:y=(h*0.03):fontcolor=#d1d155:fontsize=70:font='Comic-Sans-MS-Bold':enable='between(t,{subtitle['start']},{subtitle['end']})'"
+            drawtext_filter = f"drawtext=textfile={temp_file}:x=(w-text_w)/2:y=(h*0.04):fontcolor=#FFFF33:fontfile='C\:\\Windows\\Fonts\\comicbd.ttf':fontsize=70:enable='between(t,{subtitle['start']},{subtitle['end']})'"
         else:
-            drawtext_filter = f"drawtext=textfile={temp_file}:x=(w-text_w)/2:y=(h-text_h)/2:fontcolor=white:font='Comic-Sans-MS':fontsize=55:line_spacing=1:enable='between(t,{subtitle['start']},{subtitle['end']})'"
+            drawtext_filter = f"drawtext=textfile={temp_file}:x=(w-text_w)/2:y=(h-text_h)/2:fontcolor=#FFFFFF:fontfile='C\:\\Windows\\Fonts\\ariblk.ttf':fontsize=60:line_spacing=-10:enable='between(t,{subtitle['start']},{subtitle['end']})'"
         drawtext_filters.append(drawtext_filter)
 
     # Ghép các filter drawtext lại với nhau
@@ -136,12 +137,20 @@ def main():
     # Thư mục chứa các file ảnh
     # image_folder = 'images'  # Đảm bảo rằng bạn có thư mục 'images' với các file ảnh
     image_path = r"assets/image/img_padcast.jpg"
-    audio_path = 'assets/audio/test/0_1650_ielts-recent-actual-test-1-part-1.mp3'
+    audio_folder = r"assets\audio\test\\"
+    output_folder = r"assets\video\output\book\\" 
+    # output_video_path = r"assets/video/output/timemachinewells_01_ae_64kb.mp4"
 
-    output_video_path = r"assets/video/output/ffmpeg_video.mp4"
+    for audio_file in os.listdir(audio_folder):
+        if audio_file.lower().endswith(".mp3"):
+            file_name = os.path.splitext(audio_file)[0] 
+            audio_path = os.path.join(audio_folder, audio_file)
+            file_output = os.path.join(output_folder, file_name)
+            create_video_with_audio(image_path, audio_path, f"{file_output}.mp4",file_name) 
+            print(f"Video đã được tạo tại: {file_name}")
 
-    create_video_with_audio(image_path, audio_path, output_video_path) 
-    print(f"Video đã được tạo tại: {output_video_path}")
 
 if __name__ == "__main__":
+    # main2()
     main()
+

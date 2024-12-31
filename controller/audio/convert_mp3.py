@@ -122,6 +122,6 @@ def cut_mp3(input_file, output_file, start_time, end_time):
 # output_directory = r"assets\audio\input_wav\\" 
 # convert_all_mp3_to_wav(input_directory, output_directory)
 
-input_file = r"assets\audio\input_mp3\ielts-recent-actual-test-1-part-1.mp3"  # Thư mục chứa các tệp MP3
-output_file = r"assets\audio\input_wav\0_1650_ielts-recent-actual-test-1-part-1.mp3" 
-cut_mp3(input_file, output_file, 0, 17 * 1000)
+input_file = r"assets\audio\book\timemachinewells_01_ae_64kb.mp3"  # Thư mục chứa các tệp MP3
+output_file = r"assets\audio\input_mp3\2p_timemachinewells_01_ae_64kb.mp3" 
+cut_mp3(input_file, output_file, 0, 120 * 1000)

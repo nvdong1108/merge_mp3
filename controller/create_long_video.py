@@ -56,11 +56,11 @@ def process_video(audio_path, image_path, output_folder, file_name):
         
         for i, subtitle in enumerate( subtitles):
             if i == 0:
-                text_clip_en = TextClip(subtitle['text_en'], fontsize=70, color='#d1d155',font='Comic-Sans-MS-Bold', method='caption',align='North', size=(screen_width*0.9, None))
+                text_clip_en = TextClip(subtitle['text_en'], fontsize=70, color='orange',font='Comic-Sans-MS-Bold', method='caption',align='North', size=(screen_width*0.9, None))
                 text_clip_en = text_clip_en.set_position(('center',rows),relative=True).set_start(0).set_end(end_time_title)
                 rows = round((rows + (text_clip_en.h / screen_height) ) ,2)
             else:
-                text_clip_en = TextClip(subtitle['text_en'], fontsize=55, color='white',font='Comic-Sans-MS', method='caption', align='West',size=(screen_width*0.9, None))
+                text_clip_en = TextClip(subtitle['text_en'], fontsize=55, color='#FFFFFF',font='Comic-Sans-MS', method='caption', align='West',size=(screen_width*0.9, None))
                 text_clip_en = text_clip_en.set_position((0.05,'center'),relative=True).set_start(subtitle['start']).set_end(subtitle['end'])
                
             text_clips.append(text_clip_en)
