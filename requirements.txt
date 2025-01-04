@@ -6,3 +6,11 @@ googletrans==4.0.0-rc1
 pyannote.audio
 librosa
 soundfile
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+flask
+pyttsx3
+gTTS
+tqdm

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Phần Chức Năng Bên Trái -->
+        <div class="sidebar">
+            <h2>Features</h2>
+            <ul>
+                <li><a href="#text-to-speech">Text to Speech</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </div>
+
+        <!-- Phần Nội Dung Chính Ở Giữa -->
+        <div class="main-content">
+            <h1>Text to Speech</h1>
+            <form id="textForm">
+                <textarea id="textInput"  placeholder="Enter your text here..."></textarea>
+            <br>
+                <button type="submit">Generate Audio</button>
+            </form>
+            <div id="output">
+                <audio id="audioPlayer" controls style="display: none;"></audio>
+            </div>
+        </div>
+
+        <!-- Phần Quảng Cáo Bên Phải -->
+        <div class="advertisement">
+            <h2>Advertise Here</h2>
+            <p>Place your advertisement content here.</p>
+            <img src="https://via.placeholder.com/150" alt="Ad Example">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("textForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const text = document.getElementById("textInput").value;
+            fetch('/text-to-speech', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: text })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const audioPlayer = document.getElementById("audioPlayer");
+                audioPlayer.src = data.url;
+                audioPlayer.style.display = "block";
+                audioPlayer.play();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

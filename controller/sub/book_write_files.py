@@ -126,21 +126,27 @@ def write_subtitle_to_file(subtitles,file_name):
 
 
 def main():
-    file_name = "timemachinewells_01_ae_64kb" 
+    folder_path = r"assets\audio\test\\" 
+    if not os.path.exists(folder_path):
+        print(f"Folder '{folder_path}' does not exist.")
+        return
     
-
-    output_folder = os.path.join("assets", "subtitle", "book", f"{file_name}")
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
+    for file_name in os.listdir(folder_path):
+        if file_name.lower().endswith(".mp3"):
     
-    subtitles = load_subtitles(file_name)
+            file_name_without_extension = os.path.splitext(file_name)[0]
+            output_folder = os.path.join("assets", "subtitle", "book", f"{file_name_without_extension}")
+            if not os.path.exists(output_folder):
+                os.makedirs(output_folder)
+    
+            subtitles = load_subtitles(file_name_without_extension)
 
-    for i, subtitle in enumerate( subtitles):
-        text = subtitle['text_en']
-        wrapped_text = wrap_text(text, max_chars_per_line=50)
-        # temp_file = f"{file_name}_{i}.txt"
-        temp_file = os.path.join(output_folder, f"{file_name}_{i}.txt")
-        write_to_file(temp_file, wrapped_text)
+            for i, subtitle in enumerate( subtitles):
+                text = subtitle['text_en']
+                wrapped_text = wrap_text(text, max_chars_per_line=50)
+                # temp_file = f"{file_name}_{i}.txt"
+                temp_file = os.path.join(output_folder, f"{file_name_without_extension}_{i}.txt")
+                write_to_file(temp_file, wrapped_text)
     
     print(f"write_to_file has been created.")
     print("=========================================")    
