@@ -22,8 +22,8 @@ def home():
 def post_text_to_speech():
     text = request.get_json()['text']
     path = text_to_speech(text)
-    return jsonify({'url': f"http://127.0.0.1:8080/{path}"})
+    return jsonify({'url': f"http://127.0.0.1:5000/{path}"})
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8080)
+    app.run(host='127.0.0.1', port=5000)

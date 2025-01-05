@@ -84,26 +84,24 @@ def create_video_with_audio(image_path, audio_path, output_video_path, file_name
     drawtext_filters = []
     subtitles = load_subtitles(file_name)
 
-    # for i, subtitle in enumerate( subtitles):
-    #     text = subtitle['text_en']
-    #     wrapped_text = wrap_text(text, max_chars_per_line=50)
-    #     temp_file = f"{file_name}_{i}.txt"
-    #     write_to_file(temp_file, wrapped_text)
+    
 
     output_folder = rf"assets\subtitle\book\{file_name}"
 
     if not os.path.exists(output_folder):
         print(f"ERROR ------------ Creating folder: {output_folder}")
     
+    print(f"debug here ")
     for i, subtitle in enumerate( subtitles):
         temp_file =  f"assets/subtitle/book/{file_name}/{file_name}_{i}.txt" 
         # os.path.join(output_folder, f"{file_name}_{i}.txt")
 
         # temp_file = f"{file_name}_{i}.txt"
+        print(f"debug here: {temp_file}")
         if i == 0:
-            drawtext_filter = f"drawtext=textfile={temp_file}:x=(w-text_w)/2:y=(h*0.04):fontcolor=#FFFF33:fontfile='C\:\\Windows\\Fonts\\comicbd.ttf':fontsize=70:enable='between(t,{subtitle['start']},{subtitle['end']})'"
+            drawtext_filter = f"drawtext=textfile={temp_file}:x=(w-text_w)/2:y=(h*0.04):fontcolor=#FFFF33:fontfile='C\:\\Windows\\Fonts\\calibrib.ttf':fontsize=70:enable='between(t,{subtitle['start']},{subtitle['end']})'"
         else:
-            drawtext_filter = f"drawtext=textfile={temp_file}:x=(w-text_w)/2:y=(h-text_h)/2:fontcolor=#FFFFFF:fontfile='C\:\\Windows\\Fonts\\ariblk.ttf':fontsize=60:line_spacing=-10:enable='between(t,{subtitle['start']},{subtitle['end']})'"
+            drawtext_filter = f"drawtext=textfile={temp_file}:x=(w-text_w)/2:y=(h-text_h)/2:fontcolor=#FFFFFF:fontfile='C\:\\Windows\\Fonts\\calibri.ttf':fontsize=60:line_spacing=-10:enable='between(t,{subtitle['start']},{subtitle['end']})'"
         drawtext_filters.append(drawtext_filter)
 
     # Ghép các filter drawtext lại với nhau

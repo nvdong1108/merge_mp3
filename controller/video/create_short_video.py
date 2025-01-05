@@ -17,7 +17,7 @@ change_settings({"IMAGEMAGICK_BINARY": r"C:\Program Files\ImageMagick-7.1.1-Q16-
 # audio_path = r"assets\01-at-home.mp3"
 
 def load_subtitles(file_name):
-    file_path = fr"assets\subtitle\{file_name}.txt"
+    file_path = fr"assets\subtitle\short\{file_name}.txt"
     subtitles = []
     with open(file_path, 'r', encoding='utf-8') as file:
         for line in file:
@@ -94,9 +94,9 @@ def process_video(audio_path, image_path, output_folder, file_name):
                 text_clip_en = text_clip_en.set_position(('center',rows),relative=True).set_start(0).set_end(end_time_title)
             else:
                 if name_speaker is None:
-                    name_speaker = subtitle['speaker']
+                    name_speaker = subtitle['speaker'].strip()
 
-                if subtitle['speaker'] == name_speaker:
+                if subtitle['speaker'].strip() == name_speaker:
                     text_clip_en = TextClip(subtitle['text_en'], fontsize=55, color='white',font='Comic-Sans-MS', method='caption', align='West',size=(screen_width*0.99, None))
                     text_clip_en = text_clip_en.set_position(('left',rows),relative=True).set_start(subtitle['start']).set_end(subtitle['end'])
                 else:
