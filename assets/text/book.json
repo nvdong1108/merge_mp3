@@ -1,0 +1,402 @@
+[
+    {
+        "en": "Hello! How are you?",
+        "es": "¡Hola! ¿Cómo estás?"
+    },
+    {
+        "en": "What is your name?",
+        "es": "¿Cómo te llamas?"
+    },
+    {
+        "en": "Where are you from?",
+        "es": "¿De dónde eres?"
+    },
+    {
+        "en": "I am from the United States.",
+        "es": "Soy de los Estados Unidos."
+    },
+    {
+        "en": "How old are you?",
+        "es": "¿Cuántos años tienes?"
+    },
+    {
+        "en": "I am 25 years old.",
+        "es": "Tengo 25 años."
+    },
+    {
+        "en": "What do you do?",
+        "es": "¿A qué te dedicas?"
+    },
+    {
+        "en": "I am a student.",
+        "es": "Soy estudiante."
+    },
+    {
+        "en": "Nice to meet you.",
+        "es": "Mucho gusto."
+    },
+    {
+        "en": "Where do you live?",
+        "es": "¿Dónde vives?"
+    },
+    {
+        "en": "I live in New York.",
+        "es": "Vivo en Nueva York."
+    },
+    {
+        "en": "Do you speak English?",
+        "es": "¿Hablas inglés?"
+    },
+    {
+        "en": "Yes, I speak English.",
+        "es": "Sí, hablo inglés."
+    },
+    {
+        "en": "No, I don’t speak English very well.",
+        "es": "No, no hablo inglés muy bien."
+    },
+    {
+        "en": "Can you help me?",
+        "es": "¿Puedes ayudarme?"
+    },
+    {
+        "en": "I don’t understand.",
+        "es": "No entiendo."
+    },
+    {
+        "en": "Could you please repeat that?",
+        "es": "¿Podrías repetir eso, por favor?"
+    },
+    {
+        "en": "What time is it?",
+        "es": "¿Qué hora es?"
+    },
+    {
+        "en": "It’s 10:00 AM.",
+        "es": "Son las 10:00 AM."
+    },
+    {
+        "en": "Where is the bathroom?",
+        "es": "¿Dónde está el baño?"
+    },
+    {
+        "en": "Excuse me, I’m looking for the train station.",
+        "es": "Disculpa, estoy buscando la estación de tren."
+    },
+    {
+        "en": "How much does this cost?",
+        "es": "¿Cuánto cuesta esto?"
+    },
+    {
+        "en": "I’m sorry.",
+        "es": "Lo siento."
+    },
+    {
+        "en": "Thank you very much.",
+        "es": "Muchas gracias."
+    },
+    {
+        "en": "You’re welcome.",
+        "es": "De nada."
+    },
+    {
+        "en": "Have a nice day.",
+        "es": "Que tengas un buen día."
+    },
+    {
+        "en": "What’s the weather like today?",
+        "es": "¿Cómo está el clima hoy?"
+    },
+    {
+        "en": "It’s sunny.",
+        "es": "Está soleado."
+    },
+    {
+        "en": "It’s raining.",
+        "es": "Está lloviendo."
+    },
+    {
+        "en": "I’m hungry.",
+        "es": "Tengo hambre."
+    },
+    {
+        "en": "What do you want to eat?",
+        "es": "¿Qué quieres comer?"
+    },
+    {
+        "en": "Let’s go for lunch.",
+        "es": "Vamos a almorzar."
+    },
+    {
+        "en": "I’m thirsty.",
+        "es": "Tengo sed."
+    },
+    {
+        "en": "Do you want some water?",
+        "es": "¿Quieres un poco de agua?"
+    },
+    {
+        "en": "Can I have the bill, please?",
+        "es": "¿Me puedes traer la cuenta, por favor?"
+    },
+    {
+        "en": "Where can I buy a ticket?",
+        "es": "¿Dónde puedo comprar un billete?"
+    },
+    {
+        "en": "I would like a coffee, please.",
+        "es": "Quisiera un café, por favor."
+    },
+    {
+        "en": "What’s your favorite food?",
+        "es": "¿Cuál es tu comida favorita?"
+    },
+    {
+        "en": "I love pizza.",
+        "es": "Me encanta la pizza."
+    },
+    {
+        "en": "What is your phone number?",
+        "es": "¿Cuál es tu número de teléfono?"
+    },
+    {
+        "en": "My phone number is 123-456-7890.",
+        "es": "Mi número de teléfono es 123-456-7890."
+    },
+    {
+        "en": "Can I help you with something?",
+        "es": "¿Puedo ayudarte con algo?"
+    },
+    {
+        "en": "I’m looking for this address.",
+        "es": "Estoy buscando esta dirección."
+    },
+    {
+        "en": "Where can I find a taxi?",
+        "es": "¿Dónde puedo encontrar un taxi?"
+    },
+    {
+        "en": "How do I get to the airport?",
+        "es": "¿Cómo llego al aeropuerto?"
+    },
+    {
+        "en": "I’m lost.",
+        "es": "Estoy perdido/a."
+    },
+    {
+        "en": "Do you know where the nearest hospital is?",
+        "es": "¿Sabes dónde está el hospital más cercano?"
+    },
+    {
+        "en": "How long does it take to get there?",
+        "es": "¿Cuánto tiempo se tarda en llegar allí?"
+    },
+    {
+        "en": "I’m tired.",
+        "es": "Estoy cansado/a."
+    },
+    {
+        "en": "I need to rest.",
+        "es": "Necesito descansar."
+    },
+    {
+        "en": "Can you speak more slowly?",
+        "es": "¿Puedes hablar más despacio?"
+    },
+    {
+        "en": "What did you do yesterday?",
+        "es": "¿Qué hiciste ayer?"
+    },
+    {
+        "en": "I went to the park.",
+        "es": "Fui al parque."
+    },
+    {
+        "en": "Do you like music?",
+        "es": "¿Te gusta la música?"
+    },
+    {
+        "en": "Yes, I love music.",
+        "es": "Sí, me encanta la música."
+    },
+    {
+        "en": "What kind of music do you like?",
+        "es": "¿Qué tipo de música te gusta?"
+    },
+    {
+        "en": "I like pop music.",
+        "es": "Me gusta la música pop."
+    },
+    {
+        "en": "What’s your favorite movie?",
+        "es": "¿Cuál es tu película favorita?"
+    },
+    {
+        "en": "I love action movies.",
+        "es": "Me encantan las películas de acción."
+    },
+    {
+        "en": "Do you like to travel?",
+        "es": "¿Te gusta viajar?"
+    },
+    {
+        "en": "Yes, I love to travel.",
+        "es": "Sí, me encanta viajar."
+    },
+    {
+        "en": "Where have you been?",
+        "es": "¿Dónde has estado?"
+    },
+    {
+        "en": "I’ve been to Spain.",
+        "es": "He estado en España."
+    },
+    {
+        "en": "When are you leaving?",
+        "es": "¿Cuándo te vas?"
+    },
+    {
+        "en": "I’m leaving tomorrow.",
+        "es": "Me voy mañana."
+    },
+    {
+        "en": "Can I borrow this book?",
+        "es": "¿Puedo tomar prestado este libro?"
+    },
+    {
+        "en": "Do you have a pen?",
+        "es": "¿Tienes un bolígrafo?"
+    },
+    {
+        "en": "I need to buy some groceries.",
+        "es": "Necesito comprar víveres."
+    },
+    {
+        "en": "I don’t feel well.",
+        "es": "No me siento bien."
+    },
+    {
+        "en": "Do you have any medicine?",
+        "es": "¿Tienes alguna medicina?"
+    },
+    {
+        "en": "Where is the nearest pharmacy?",
+        "es": "¿Dónde está la farmacia más cercana?"
+    },
+    {
+        "en": "I’m going to the gym.",
+        "es": "Voy al gimnasio."
+    },
+    {
+        "en": "Do you like sports?",
+        "es": "¿Te gustan los deportes?"
+    },
+    {
+        "en": "I like soccer.",
+        "es": "Me gusta el fútbol."
+    },
+    {
+        "en": "What’s your favorite book?",
+        "es": "¿Cuál es tu libro favorito?"
+    },
+    {
+        "en": "I like mystery books.",
+        "es": "Me gustan los libros de misterio."
+    },
+    {
+        "en": "Can you recommend a good restaurant?",
+        "es": "¿Puedes recomendar un buen restaurante?"
+    },
+    {
+        "en": "I’m waiting for my friend.",
+        "es": "Estoy esperando a mi amigo/a."
+    },
+    {
+        "en": "Let’s go to the beach.",
+        "es": "Vamos a la playa."
+    },
+    {
+        "en": "I like swimming.",
+        "es": "Me gusta nadar."
+    },
+    {
+        "en": "How much is a ticket to the cinema?",
+        "es": "¿Cuánto cuesta una entrada al cine?"
+    },
+    {
+        "en": "I’ll take one, please.",
+        "es": "Tomaré una, por favor."
+    },
+    {
+        "en": "What time does the movie start?",
+        "es": "¿A qué hora empieza la película?"
+    },
+    {
+        "en": "It starts at 7:00 PM.",
+        "es": "Empieza a las 7:00 PM."
+    },
+    {
+        "en": "Do you have a sister or brother?",
+        "es": "¿Tienes una hermana o hermano?"
+    },
+    {
+        "en": "Yes, I have one brother.",
+        "es": "Sí, tengo un hermano."
+    },
+    {
+        "en": "What is your favorite color?",
+        "es": "¿Cuál es tu color favorito?"
+    },
+    {
+        "en": "My favorite color is blue.",
+        "es": "Mi color favorito es el azul."
+    },
+    {
+        "en": "Where do you want to go on vacation?",
+        "es": "¿Dónde quieres ir de vacaciones?"
+    },
+    {
+        "en": "I want to go to the mountains.",
+        "es": "Quiero ir a las montañas."
+    },
+    {
+        "en": "Do you like animals?",
+        "es": "¿Te gustan los animales?"
+    },
+    {
+        "en": "Yes, I have a cat.",
+        "es": "Sí, tengo un gato."
+    },
+    {
+        "en": "I’m looking for a job.",
+        "es": "Estoy buscando trabajo."
+    },
+    {
+        "en": "Do you work here?",
+        "es": "¿Trabajas aquí?"
+    },
+    {
+        "en": "Yes, I work in a bank.",
+        "es": "Sí, trabajo en un banco."
+    },
+    {
+        "en": "What are you doing today?",
+        "es": "¿Qué haces hoy?"
+    },
+    {
+        "en": "I’m going to study.",
+        "es": "Voy a estudiar."
+    },
+    {
+        "en": "I don’t know.",
+        "es": "No sé."
+    },
+    {
+        "en": "I love learning new things.",
+        "es": "Me encanta aprender cosas nuevas."
+    },
+    {
+        "en": "Goodbye! See you soon.",
+        "es": "¡Adiós! ¡Nos vemos pronto!"
+    }
+]

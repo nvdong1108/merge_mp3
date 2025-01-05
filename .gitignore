@@ -24,7 +24,8 @@ Thumbs.db
 # Ignore environment files
 .env
 .env.*
-assets/*.mp3
-assets/*.mp4
-#assets/**/*.{mp3,mp4}
+
+assets/**/*.mp3
+assets/**/*.mp4
+assets/subtitle/
 static/
