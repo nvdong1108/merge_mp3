@@ -28,4 +28,6 @@ Thumbs.db
 assets/**/*.mp3
 assets/**/*.mp4
 assets/subtitle/
-static/
+
+static/**/*.mp3
+static/**/*.mp4
