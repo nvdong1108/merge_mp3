@@ -83,7 +83,7 @@ def text_to_speech(content, output_folder):
     combined = audio_es + silence1 + audio_en_1 + silence2 + audio_en_2 + silence1 + audio_en_3 + silence_end
 
     final_file_name = file_name_uuid()
-    final_path = os.path.join("static", "audio", "gtts", f"{final_file_name}.mp3")
+    final_path = os.path.join(output_folder, f"{final_file_name}.mp3")
     combined.export(final_path, format="mp3")
 
     os.remove(path_es)
