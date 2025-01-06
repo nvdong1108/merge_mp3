@@ -1,45 +1,36 @@
 import sys
 import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-sys.path.append(parent_dir)
 
 from pydub import AudioSegment
 from gtts import gTTS
 from tqdm import tqdm
 from moviepy.config import change_settings
 import os
+import time
 import uuid
 import datetime
 import json
 from moviepy.editor import ImageClip, AudioFileClip, TextClip, CompositeVideoClip
-from common.file_untils import write_to_file
+from controller.common.file_untils import write_to_file, create_folder_new_project, convert_text_to_json
 import ffmpeg
 import subprocess
+from flask_socketio import SocketIO
 
 
 change_settings({"IMAGEMAGICK_BINARY": r"C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe"})
 
-class Content:
-    def __init__(self, es, en):
-        self.es = es
-        self.en = en
 
+
+# class Content:
+#     def __init__(self, es, en):
+#         self.es = es
+#         self.en = en
 
 def read_text_file():
-    # content_list = []
-    
     with open('assets/text/book.json', 'r', encoding='utf-8') as file:
-        # lines = file.readlines()
         data = json.load(file)
-
-        # for i in range(0,len(lines),2):
-        #     es_text = lines[i].strip() 
-        #     en_text = lines[i + 1].strip() if i + 1 < len(lines) else ""
-            
-        #     content_list.append(Content(es_text, en_text))
-
     return data
 
 def file_name_uuid(i=0):
@@ -77,10 +68,9 @@ def text_to_speech(content, output_folder):
     audio_en_3 = AudioSegment.from_mp3(path_en_3)
 
     silence1 = AudioSegment.silent(duration=2000)
-    silence2 = AudioSegment.silent(duration=1500)
     silence_end = AudioSegment.silent(duration=3000)
     
-    combined = audio_es + silence1 + audio_en_1 + silence2 + audio_en_2 + silence1 + audio_en_3 + silence_end
+    combined = audio_es + silence1 + audio_en_1 + silence1 + audio_en_2 + silence1 + audio_es + silence1 + audio_en_3 + silence_end
 
     final_file_name = file_name_uuid()
     final_path = os.path.join(output_folder, f"{final_file_name}.mp3")
@@ -133,34 +123,25 @@ def create_videos(audio_path, image_path, sentence, files_videos_output):
 def merge_videos(filelist, output_file):
     command = f"ffmpeg -f concat -safe 0 -i {filelist} -c copy {output_file}"
     subprocess.run(command, shell=True)
-    
 
-if __name__ == "__main__":
-    content = read_text_file()
-    path_videos_list = []
-    combined = AudioSegment.empty()
+def test_(socketio):
+    total = 10 
+    for i in range(total):
+        socketio.sleep(1)
+        socketio.emit('progress', {'progress': i*10})    
+
+
+def json_to_videos(content,socketio):
     image_path = r"assets\image\2.png"
-
-    sequence =  0 
-    with open('static/data.json', 'r+') as f:
-        data = json.load(f)
-        data['sequence'] += 1
-        sequence = data['sequence']
-        f.seek(0)
-        json.dump(data, f)
-        f.truncate()
-
-    project_name = f"myproject{sequence}"
-    output_folder = rf"static\project_videos\{project_name}\\" 
-
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
-
+    output_folder = create_folder_new_project()
     files_txt_name_videos = os.path.join(output_folder, "filelist.txt")
-
+    total_sentences = len(content)
     for i,sentence in enumerate(tqdm(content, desc="Processing sentences", unit="sentence")):
-        path = text_to_speech(sentence, output_folder)
-        audio = AudioSegment.from_file(path)
+        progress = int((i + 1) / total_sentences * 100)
+        print(f"=================== >>>>> Progress {progress}")
+        socketio.emit('progress', {'progress': progress})
+        path_audio = text_to_speech(sentence, output_folder)
+        audio = AudioSegment.from_file(path_audio)
         file_name  =f"{file_name_uuid(i)}"
 
         files_audio_output = os.path.join(output_folder, f"{file_name}.mp3")
@@ -175,6 +156,32 @@ if __name__ == "__main__":
 
     files_result = os.path.join(output_folder, f"result_{file_name_uuid()}.mp4")
     merge_videos(files_txt_name_videos,files_result)
+    
+    print(f"Done: {files_result}")
+    return files_result
+
+
+def text_to_videos(text, socketio):
+    # thực tết 
+    json = convert_text_to_json(text)
+    socketio.emit('progress', {'progress': 1})
+    # test_(socketio)
+    path = json_to_videos(json,socketio)
+    socketio.emit('progress', {'progress': 100})
+
+    print("\n\ndone===================================\n\n\n\n")
+    # return path
+    # test 
+
+
+if __name__ == "__main__":
+    content = read_text_file()
+    socketio = SocketIO()
+    json_to_videos(content,socketio)
+
+    
+
+    
 
 
     

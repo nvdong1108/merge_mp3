@@ -1,0 +1,8 @@
+Hi, I'd like to change some euros to dollars.
+Hello. How many euros do you want to exchange today?
+I have 300 euros.
+What is the exchange rate right now?
+The current rate is 1 euro to 1.08 dollars.
+So, you'll get 324 dollars.
+Is there any fee for the transaction?
+Yes, there's a small fee of 5 dollars.

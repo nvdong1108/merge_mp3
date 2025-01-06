@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to Speech</title>
+    <title>Text to Videos</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
@@ -12,35 +12,61 @@
         <div class="sidebar">
             <h2>Features</h2>
             <ul>
-                <li><a href="#text-to-speech">Text to Speech</a></li>
+                <li><a href="#text-to-speech">Text to Videos</a></li>
                 <li><a href="#settings">Settings</a></li>
                 <li><a href="#help">Help</a></li>
             </ul>
         </div>
-
-        <!-- Phần Nội Dung Chính Ở Giữa -->
         <div class="main-content">
-            <h1>Text to Speech</h1>
+            <h1>Text to Videos</h1>
             <form id="textForm">
                 <textarea id="textInput"  placeholder="Enter your text here..."></textarea>
             <br>
                 <button type="submit">Generate Audio</button>
             </form>
-            <div id="output">
-                <audio id="audioPlayer" controls style="display: none;"></audio>
+            <div class="progress-container">
+                <progress id="progressBar" value="0" max="100"></progress>
+                <span id="progressPercent">0%</span>
             </div>
         </div>
-
-        <div class="advertisement">
-            <h3>Available Files</h3>
-            <ul id="fileList"></ul>
+        <div id="dynamic-content">
+            
         </div>
 
-
     </div>
+    
+    <!-- <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script> -->
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+
     <script>
-        
+
+        document.querySelector('a[href="#help"]').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            debugger
+            fetch('./templates/my_project.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load HTML file');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById('dynamic-content').innerHTML = html; // Chèn nội dung vào div
+                })
+                .catch(error => {
+                    console.error('Error loading HTML:', error);
+                });
+        });
+
+        const socket = io.connect('http://127.0.0.1:5000');
+        socket.on('progress', (data) => {
+            const progressBar = document.getElementById("progressBar");
+            const progressPercent = document.getElementById("progressPercent");
+            progressBar.value = data.progress;
+            progressPercent.textContent = `${data.progress}%`;
+        });
+
+
         document.getElementById("textForm").addEventListener("submit", function(event) {
             event.preventDefault();
             const text = document.getElementById("textInput").value;
@@ -53,10 +79,18 @@
             })
             .then(response => response.json())
             .then(data => {
-                const audioPlayer = document.getElementById("audioPlayer");
-                audioPlayer.src = data.url;
-                audioPlayer.style.display = "block";
-                audioPlayer.play();
+                // const audioPlayer = document.getElementById("audioPlayer");
+                // audioPlayer.src = data.url;
+                // audioPlayer.style.display = "block";
+                // audioPlayer.play();
+                // const videoPlayer = document.getElementById("videoPlayer");
+                // videoPlayer.src = data.url;
+                // videoPlayer.style.display = "block";
+                // videoPlayer.style.objectFit = "contain";
+                // videoPlayer.style.width = "40%";
+                // videoPlayer.style.height = "40%";
+                // videoPlayer.play();
+                console.log(data.url);
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -64,22 +98,22 @@
         });
 
 
-        fetch('/files')
-        .then(response => response.json())
-        .then(files => {
-            const fileList = document.getElementById('fileList');
-            files.forEach(file => {
-                const listItem = document.createElement('li');
-                const fileLink = document.createElement('a');
-                fileLink.href = '/static/project_videos/${file}'; 
-                fileLink.textContent = file; 
-                listItem.appendChild(fileLink);
-                fileList.appendChild(listItem);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching files:', error);
-        });
+        // fetch('/files')
+        // .then(response => response.json())
+        // .then(files => {
+        //     const fileList = document.getElementById('fileList');
+        //     files.forEach(file => {
+        //         const listItem = document.createElement('li');
+        //         const fileLink = document.createElement('a');
+        //         fileLink.href = '/static/project_videos/${file}'; 
+        //         fileLink.textContent = file; 
+        //         listItem.appendChild(fileLink);
+        //         fileList.appendChild(listItem);
+        //     });
+        // })
+        // .catch(error => {
+        //     console.error('Error fetching files:', error);
+        // });
 
 
     </script>

@@ -1,0 +1,6 @@
+Hello, this is the City Library calling.
+We regret to inform you that the book you reserved has mistakenly been given to another member.
+We understand this inconvenience and we'd like to offer you two options:
+either wait for the book to be returned, approximately in a week,
+or you can choose another book available in our catalog.
+We apologize for this mix-up and appreciate your understanding.

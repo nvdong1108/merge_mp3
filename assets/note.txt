@@ -1,0 +1,109 @@
+
+Available Fonts: 
+['Arial', 'Arial-Black', 'Arial-Bold', 'Arial-Bold-Italic', 'Arial-Italic'
+, 'Bahnschrift'
+, 'Calibri', 'Calibri-Bold', 'Calibri-Bold-Italic', 'Calibri-Italic', 'Calibri-Light', 'Calibri-Light-Italic'
+, 'Cambria-&-Cambria-Math', 'Cambria-Bold', 'Cambria-Bold-Italic', 'Cambria-Italic'
+, 'Candara', 'Candara-Bold', 'Candara-Bold-Italic', 'Candara-Italic', 'Candara-Light', 'Candara-Light-Italic'
+, 'Cascadia-Code-Regular', 'Cascadia-Mono-Regular'
+, 'Comic-Sans-MS', 'Comic-Sans-MS-Bold', 'Comic-Sans-MS-Bold-Italic', 'Comic-Sans-MS-Italic'
+, 'Consolas', 'Consolas-Bold', 'Consolas-Bold-Italic', 'Consolas-Italic', 'Constantia', 'Constantia-Bold', 'Constantia-Bold-Italic', 'Constantia-Italic', 'Corbel', 'Corbel-Bold', 'Corbel-Bold-Italic', 'Corbel-Italic', 'Corbel-Light', 'Corbel-Light-Italic', 'Courier-New', 'Courier-New-Bold', 'Courier-New-Bold-Italic', 'Courier-New-Italic', 'Ebrima', 'Ebrima-Bold', 'Franklin-Gothic-Medium', 'Franklin-Gothic-Medium-Italic', 'Gabriola', 'Gadugi', 'Gadugi-Bold', 'Georgia', 'Georgia-Bold', 'Georgia-Bold-Italic', 'Georgia-Italic', 'Holo-MDL2-Assets', 'Impact', 'Ink-Free', 'Javanese-Text', 'Leelawadee-UI', 'Leelawadee-UI-Bold', 'Leelawadee-UI-Semilight', 'Lucida-Console', 'Lucida-Sans-Unicode', 'Malgun-Gothic', 'Malgun-Gothic-Bold', 'Malgun-Gothic-SemiLight', 'Microsoft-Himalaya', 'Microsoft-JhengHei-&-Microsoft-JhengHei-UI', 'Microsoft-JhengHei-Bold-&-Microsoft-JhengHei-UI-Bold', 'Microsoft-JhengHei-Light-&-Microsoft-JhengHei-UI-Light', 'Microsoft-New-Tai-Lue', 'Microsoft-New-Tai-Lue-Bold', 'Microsoft-PhagsPa', 'Microsoft-PhagsPa-Bold', 'Microsoft-Sans-Serif', 'Microsoft-Tai-Le', 'Microsoft-Tai-Le-Bold', 'Microsoft-YaHei-&-Microsoft-YaHei-UI', 'Microsoft-YaHei-Bold-&-Microsoft-YaHei-UI-Bold', 'Microsoft-YaHei-Light-&-Microsoft-YaHei-UI-Light', 'Microsoft-Yi-Baiti', 'MingLiU-ExtB-&-PMingLiU-ExtB-&-MingLiU_HKSCS-ExtB', 'Mongolian-Baiti', 'MS-Gothic-&-MS-UI-Gothic-&-MS-PGothic', 'MV-Boli', 'Myanmar-Text', 'Myanmar-Text-Bold', 'Nirmala-UI', 'Nirmala-UI-Bold', 'Nirmala-UI-Semilight', 'Palatino-Linotype', 'Palatino-Linotype-Bold', 'Palatino-Linotype-Bold-Italic', 'Palatino-Linotype-Italic', 'Segoe-MDL2-Assets', 'Segoe-Print', 'Segoe-Print-Bold', 'Segoe-Script', 'Segoe-Script-Bold', 'Segoe-UI', 'Segoe-UI-Black', 'Segoe-UI-Black-Italic', 'Segoe-UI-Bold', 'Segoe-UI-Bold-Italic', 'Segoe-UI-Emoji', 'Segoe-UI-Historic', 'Segoe-UI-Italic', 'Segoe-UI-Light', 'Segoe-UI-Light-Italic', 'Segoe-UI-Semibold', 'Segoe-UI-Semibold-Italic', 'Segoe-UI-Semilight', 'Segoe-UI-Semilight-Italic', 'Segoe-UI-Symbol', 'SimSun-&-NSimSun', 'SimSun-ExtB', 'Sitka-Small-&-Sitka-Text-&-Sitka-Subheading-&-Sitka-Heading-&-Sitka-Display-&-Sitka-Banner', 'Sitka-Small-Bold-&-Sitka-Text-Bold-&-Sitka-Subheading-Bold-&-Sitka-Heading-Bold-&-Sitka-Display-Bold-&-Sitka-Banner-Bold', 'Sitka-Small-Bold-Italic-&-Sitka-Text-Bold-Italic-&-Sitka-Subheading-Bold-Italic-&-Sitka-Heading-Bold-Italic-&-Sitka-Display-Bold-Italic-&-Sitka-Banner-Bold-Italic', 'Sitka-Small-Italic-&-Sitka-Text-Italic-&-Sitka-Subheading-Italic-&-Sitka-Heading-Italic-&-Sitka-Display-Italic-&-Sitka-Banner-Italic', 'Sylfaen', 'Symbol', 'Tahoma', 'Tahoma-Bold', 'Times-New-Roman', 'Times-New-Roman-Bold', 'Times-New-Roman-Bold-Italic', 'Times-New-Roman-Italic', 'Trebuchet-MS', 'Trebuchet-MS-Bold', 'Trebuchet-MS-Bold-Italic', 'Trebuchet-MS-Italic', 'Verdana', 'Verdana-Bold', 'Verdana-Bold-Italic', 'Verdana-Italic', 'Webdings', 'Wingdings', 'Yu-Gothic-Bold-&-Yu-Gothic-UI-Semibold-&-Yu-Gothic-UI-Bold', 'Yu-Gothic-Light-&-Yu-Gothic-UI-Light', 'Yu-Gothic-Medium-&-Yu-Gothic-UI-Regular', 'Yu-Gothic-Regular-&-Yu-Gothic-UI-Semilight']
+
+
+Lesson 21 : Learn Daily English Conversations  #englishspeaking  #learnenglish #languagelearning
+
+Tiếng Bồ Đào Nha:
+Lição 12: Aprenda Conversações Diárias em Inglês
+
+Tiếng Hàn:
+Lesson 12: 일상 영어 회화 배우기
+
+Tiếng Nga:
+Урок 12: Изучаем повседневные разговоры на английском
+
+Tiếng Nhật:
+レッスン12：日常英会話を学ぼう
+
+Tiếng Pháp:
+Leçon 12 : Apprenez les Conversations Quotidiennes en Anglais
+
+Tiếng Thái:
+บทเรียนที่ 12: เรียนการสนทนาภาษาอังกฤษในชีวิตประจำวัน
+
+Tiếng Tây Ban Nha:
+Lección 12: Aprende Conversaciones Diarias en Inglés
+
+Tiếng Việt:
+Bài học 12: Học các cuộc hội thoại tiếng Anh hằng ngày
+
+Tiếng Đức:
+Lektion 12: Lerne tägliche Englischgespräche
+
+Tiếng Ả Rập:
+الدرس 12: تعلم المحادثات اليومية باللغة الإنجليزية
+
+
+
+
+Learn Daily English Conversations
+
+🎯 Learn Daily English Conversations 
+🚀 Start your English learning journey with Lesson 1: Daily conversations with your family.
+💬 Improve your communication skills step by step, perfect for all ages.
+
+👉 Watch more lessons on our YouTube channel: 
+  HiTee-English https://www.youtube.com/@HiTee-English.
+  Don’t forget to Like, Share, and Subscribe for more valuable lessons!
+
+🎉 Let’s make progress every day! ❤️
+
+#LearnEnglish 
+#EnglishConversation 
+#DailyEnglish 
+#EnglishPractice 
+#EnglishAtHome 
+#HiTeeEnglish 
+#EnglishLesson 
+#LanguageLearning
+
+
+Podcast English :  Choosing the Best Subject: A Student Discussion
+
+Podcast 4 : 
+
+Tiếng Bồ Đào Nha
+Tiếng Hàn
+Tiếng Nhật
+Tiếng Pháp
+Tiếng Thái
+Tiếng Tây Ban Nha
+Tiếng Việt
+Tiếng Đức
+Tiếng Ả Rập
+
+Tiếng Bồ Đào Nha
+Podcast em Inglês: Escolhendo o Melhor Assunto: Uma Discussão Estudantil
+
+Tiếng Hàn
+영어 팟캐스트: 최고의 과목 선택하기: 학생들의 토론
+
+Tiếng Nhật
+英語ポッドキャスト: 最適な科目の選択: 学生ディスカッション
+
+Tiếng Pháp
+Podcast en anglais : Choisir la Meilleure Matière : Une Discussion Étudiante
+
+Tiếng Thái
+พอดแคสต์ภาษาอังกฤษ: การเลือกวิชาที่ดีที่สุด: การอภิปรายของนักเรียน
+
+Tiếng Tây Ban Nha
+Podcast en Inglés: Elegir la Mejor Materia: Una Discusión Estudiantil
+
+Tiếng Việt
+Podcast Tiếng Anh: Lựa Chọn Môn Học Tốt Nhất: Một Cuộc Thảo Luận Sinh Viên
+
+Tiếng Đức
+Englischer Podcast: Die Beste Fachwahl: Eine Studentendiskussion
+
+Tiếng Ả Rập
+بودكاست باللغة الإنجليزية: اختيار أفضل موضوع: مناقشة طلابية

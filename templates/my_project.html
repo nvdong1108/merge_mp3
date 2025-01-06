@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic File Loader</title>
+</head>
+<body>
+    <h1>Files in Assist Folder</h1>
+    <ul id="fileList"></ul>
+
+    <script>
+        fetch('/list-assist-files')
+            .then(response => response.json())
+            .then(files => {
+                const fileList = document.getElementById('fileList');
+                files.forEach(file => {
+                    // Tạo phần tử liên kết cho mỗi file
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = `/assist/${file}`; // Link tới file
+                    link.textContent = file;       // Hiển thị tên file
+                    link.target = '_blank';       // Mở file trong tab mới
+                    listItem.appendChild(link);
+                    fileList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error loading files:', error));
+    </script>
+</body>
+</html>

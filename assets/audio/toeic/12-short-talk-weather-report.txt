@@ -1,0 +1,7 @@
+Good morning, everyone.
+This is your local weather report.
+Today, in the downtown area,
+the temperature is going to reach a high of 28 degrees
+with humidity sitting at around 70%.
+It will be partly cloudy with a good chance of rain in the late afternoon.
+So, don't forget to carry an umbrella if you're heading out.
