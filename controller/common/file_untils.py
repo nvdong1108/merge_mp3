@@ -21,7 +21,7 @@ def write_to_file(file_path, content,overwrite=True):
         print(f"Lỗi khi ghi tệp: {e}")
 
 def convert_text_to_json(text):
-    file_tmp = rf"static\tmp\{uuids.uuid4()}.txt" 
+    file_tmp = rf"static\tmp\txt_{uuids.uuid4()}.txt" 
     write_to_file(file_tmp,text)
 
     json_result = []
@@ -31,11 +31,15 @@ def convert_text_to_json(text):
         
     for i in range(0,len(lines),2):
         en_text = lines[i].strip()    
-        en_text = lines[i+1].strip()
+        es_text = lines[i+1].strip()
         json_result.append({"en":en_text,
-                            "es":en_text})    
+                            "es":es_text})    
         
-    os.remove(file_tmp)
+    file_json_tmp = rf"static\tmp\json_{uuids.uuid4()}.txt" 
+    write_to_file(file_json_tmp,json.dumps(json_result))
+
+    # os.remove(file_tmp)
+
     return json_result
 
 def create_folder_new_project():

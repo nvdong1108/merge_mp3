@@ -30,7 +30,7 @@
             </div>
         </div>
         <div id="dynamic-content">
-            
+
         </div>
 
     </div>
@@ -39,10 +39,12 @@
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
 
     <script>
+        
+        
+
 
         document.querySelector('a[href="#help"]').addEventListener('click', function(event) {
             event.preventDefault(); 
-            debugger
             fetch('./templates/my_project.html')
                 .then(response => {
                     if (!response.ok) {
@@ -59,7 +61,14 @@
         });
 
         const socket = io.connect('http://127.0.0.1:5000');
+
+        socket.on('connect', () => {
+            console.log('Connected to server via socket.io 222');
+        });
+
+
         socket.on('progress', (data) => {
+            console.log('Progress:', data.progress);
             const progressBar = document.getElementById("progressBar");
             const progressPercent = document.getElementById("progressPercent");
             progressBar.value = data.progress;

@@ -138,8 +138,8 @@ def json_to_videos(content,socketio):
     total_sentences = len(content)
     for i,sentence in enumerate(tqdm(content, desc="Processing sentences", unit="sentence")):
         progress = int((i + 1) / total_sentences * 100)
-        print(f"=================== >>>>> Progress {progress}")
-        socketio.emit('progress', {'progress': progress})
+        print(f"\n\n\n=================== >>>>> Progress {progress} ====================================\n\n")
+        # socketio.emit('progress', {'progress': progress}, broadcast=True)
         path_audio = text_to_speech(sentence, output_folder)
         audio = AudioSegment.from_file(path_audio)
         file_name  =f"{file_name_uuid(i)}"
@@ -164,14 +164,16 @@ def json_to_videos(content,socketio):
 def text_to_videos(text, socketio):
     # thực tết 
     json = convert_text_to_json(text)
-    socketio.emit('progress', {'progress': 1})
+    # socketio.emit('progress', {'progress': 1}, broadcast=True)
     # test_(socketio)
     path = json_to_videos(json,socketio)
-    socketio.emit('progress', {'progress': 100})
+    # socketio.emit('progress', {'progress': 100}, broadcast=True)
 
     print("\n\ndone===================================\n\n\n\n")
-    # return path
+    return path
     # test 
+
+    
 
 
 if __name__ == "__main__":
