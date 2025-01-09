@@ -1,0 +1,254 @@
+Hỏi đường : 
+
+
+Where is the nearest bus stop?
+¿Dónde está la parada de autobús más cercana?
+
+Can you show me on the map?
+¿Puedes mostrarme en el mapa?
+
+How do I get to the train station?
+¿Cómo llego a la estación de tren?
+
+Go straight ahead.
+Sigue todo recto.
+
+Turn left at the corner.
+Gira a la izquierda en la esquina.
+
+Turn right after the traffic light.
+Gira a la derecha después del semáforo.
+
+Is it far from here?
+¿Está lejos de aquí?
+
+No, it’s very close.
+No, está muy cerca.
+
+You’ll see it on your right.
+Lo verás a tu derecha.
+
+It’s next to the bank.
+Está al lado del banco.
+
+Opposite the supermarket.
+Frente al supermercado.
+
+Behind the park.
+Detrás del parque.
+
+How long does it take to get there?
+¿Cuánto tiempo se tarda en llegar allí?
+
+About 10 minutes on foot.
+Aproximadamente 10 minutos a pie.
+
+Can I take a taxi?
+¿Puedo tomar un taxi?
+
+Yes, it’s a good option.
+Sí, es una buena opción.
+
+Is there a bus that goes there?
+¿Hay un autobús que vaya allí?
+
+Take bus number 5.
+Toma el autobús número 5.
+
+Where is the taxi stand?
+¿Dónde está la parada de taxis?
+
+At the end of the street.
+Al final de la calle.
+
+Can I walk there?
+¿Puedo ir caminando hasta allí?
+
+Yes, it’s a short walk.
+Sí, es un paseo corto.
+
+Which way should I go?
+¿Qué camino debo tomar?
+
+Follow this road.
+Sigue esta carretera.
+
+Is there a shortcut?
+¿Hay un atajo?
+
+Yes, through the park.
+Sí, a través del parque.
+
+Where is the nearest hospital?
+¿Dónde está el hospital más cercano?
+
+It’s in the city center.
+Está en el centro de la ciudad.
+
+How do I get to the airport?
+¿Cómo llego al aeropuerto?
+
+Take the highway.
+Toma la autopista.
+
+Is there a metro station nearby?
+¿Hay una estación de metro cerca?
+
+Yes, two blocks away.
+Sí, a dos cuadras.
+
+Where is the entrance to the museum?
+¿Dónde está la entrada del museo?
+
+It’s around the corner.
+Está a la vuelta de la esquina.
+
+Where is the exit?
+¿Dónde está la salida?
+
+Follow the signs.
+Sigue las señales.
+
+Where is the main square?
+¿Dónde está la plaza principal?
+
+It’s in the heart of the city.
+Está en el corazón de la ciudad.
+
+How can I get to the beach?
+¿Cómo puedo llegar a la playa?
+
+Take this road and turn left.
+Toma esta carretera y gira a la izquierda.
+
+Is there parking available?
+¿Hay estacionamiento disponible?
+
+Yes, there’s a lot nearby.
+Sí, hay un aparcamiento cerca.
+
+What’s the best way to get there?
+¿Cuál es la mejor manera de llegar allí?
+
+By car or by train.
+En coche o en tren.
+
+Where is the tourist information center?
+¿Dónde está la oficina de información turística?
+
+It’s next to the cathedral.
+Está junto a la catedral.
+
+Can you recommend a good restaurant nearby?
+¿Puedes recomendarme un buen restaurante cerca?
+
+There’s one on this street.
+Hay uno en esta calle.
+
+Is the road safe at night?
+¿Es segura la carretera por la noche?
+
+Yes, it’s well lit.
+Sí, está bien iluminada.
+
+Where is the nearest ATM?
+¿Dónde está el cajero automático más cercano?
+
+It’s next to the pharmacy.
+Está junto a la farmacia.
+
+How do I get to the hotel from here?
+¿Cómo llego al hotel desde aquí?
+
+Take the second street on the right.
+Toma la segunda calle a la derecha.
+
+Where is the nearest gas station?
+¿Dónde está la gasolinera más cercana?
+
+It’s two kilometers ahead.
+Está a dos kilómetros adelante.
+
+Can I park here?
+¿Puedo aparcar aquí?
+
+No, it’s a no-parking zone.
+No, es una zona de no estacionamiento.
+
+Where is the police station?
+¿Dónde está la comisaría de policía?
+
+It’s on Main Street.
+Está en la calle principal.
+
+How do I get to the shopping mall?
+¿Cómo llego al centro comercial?
+
+Take the metro to the last stop.
+Toma el metro hasta la última parada.
+
+Is there a bridge nearby?
+¿Hay un puente cerca?
+
+Yes, just cross the river.
+Sí, solo cruza el río.
+
+Can you tell me where the library is?
+¿Puedes decirme dónde está la biblioteca?
+
+It’s next to the university.
+Está junto a la universidad.
+
+Where is the nearest post office?
+¿Dónde está la oficina de correos más cercana?
+
+It’s on the next street.
+Está en la siguiente calle.
+
+Do I need a ticket to enter the park?
+¿Necesito un boleto para entrar al parque?
+
+No, it’s free.
+No, es gratis.
+
+Where does this road lead to?
+¿A dónde lleva esta carretera?
+
+It leads to the town square.
+Lleva a la plaza del pueblo.
+
+How do I get back to the city center?
+¿Cómo regreso al centro de la ciudad?
+
+Take the same road back.
+Toma el mismo camino de regreso.
+
+Are there any landmarks I should look for?
+¿Hay algún punto de referencia que deba buscar?
+
+Yes, look for the tall tower.
+Sí, busca la torre alta.
+
+Is the museum open today?
+¿Está abierto el museo hoy?
+
+Yes, it’s open until 6 PM.
+Sí, está abierto hasta las 6 PM.
+
+Can you give me directions to the park?
+¿Puedes darme indicaciones para llegar al parque?
+
+Walk straight, then turn left.
+Camina recto, luego gira a la izquierda.
+
+Is there a pedestrian crossing?
+¿Hay un paso de peatones?
+
+Yes, at the traffic light.
+Sí, en el semáforo.
+
+How do I get to the other side of the river?
+¿Cómo llego al otro lado del río?
+
+Cross the bridge ahead.
+Cruza el puente adelante.

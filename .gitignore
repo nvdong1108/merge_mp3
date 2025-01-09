@@ -33,5 +33,5 @@ static/**/*.mp3
 static/**/*.mp4
 
 static/project_videos/
-
+static/tmp/
 *.mp3

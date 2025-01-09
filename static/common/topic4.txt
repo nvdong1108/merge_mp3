@@ -1,0 +1,271 @@
+Đặt phòng khách sạn (Booking a Hotel Room)
+
+Do you have any rooms available?
+¿Tienen habitaciones disponibles?
+
+I’d like to book a room.
+Me gustaría reservar una habitación.
+
+For how many nights?
+¿Para cuántas noches?
+
+For three nights, please.
+Para tres noches, por favor.
+
+What type of room would you like?
+¿Qué tipo de habitación le gustaría?
+
+A double room, please.
+Una habitación doble, por favor.
+
+Do you have a single room?
+¿Tienen una habitación individual?
+
+Yes, we do.
+Sí, la tenemos.
+
+What’s the rate per night?
+¿Cuál es la tarifa por noche?
+
+It’s $100 per night.
+Son 100 dólares por noche.
+
+Is breakfast included?
+¿El desayuno está incluido?
+
+Yes, it’s included.
+Sí, está incluido.
+
+Can I see the room first?
+¿Puedo ver la habitación primero?
+
+Sure, let me show you.
+Claro, déjeme mostrarle.
+
+Does the room have air conditioning?
+¿La habitación tiene aire acondicionado?
+
+Yes, it does.
+Sí, la tiene.
+
+Is there free Wi-Fi?
+¿Hay Wi-Fi gratis?
+
+Yes, we provide free Wi-Fi.
+Sí, ofrecemos Wi-Fi gratis.
+
+Does the room have a private bathroom?
+¿La habitación tiene baño privado?
+
+Yes, all rooms have private bathrooms.
+Sí, todas las habitaciones tienen baño privado.
+
+Do you have non-smoking rooms?
+¿Tienen habitaciones para no fumadores?
+
+Yes, we do.
+Sí, tenemos.
+
+Can I pay with a credit card?
+¿Puedo pagar con tarjeta de crédito?
+
+Yes, we accept all major credit cards.
+Sí, aceptamos todas las tarjetas principales.
+
+Do you need a deposit?
+¿Necesitan un depósito?
+
+Yes, a $50 deposit is required.
+Sí, se requiere un depósito de 50 dólares.
+
+What time is check-in?
+¿A qué hora es el check-in?
+
+Check-in is at 2 PM.
+El check-in es a las 2 PM.
+
+What time is check-out?
+¿A qué hora es el check-out?
+
+Check-out is at 11 AM.
+El check-out es a las 11 AM.
+
+Can I check in early?
+¿Puedo registrarme temprano?
+
+It depends on availability.
+Depende de la disponibilidad.
+
+Do you offer room service?
+¿Ofrecen servicio a la habitación?
+
+Yes, we do.
+Sí, lo ofrecemos.
+
+Is there a swimming pool?
+¿Hay piscina?
+
+Yes, it’s on the rooftop.
+Sí, está en la azotea.
+
+Do you have a gym?
+¿Tienen gimnasio?
+
+Yes, it’s open 24 hours.
+Sí, está abierto las 24 horas.
+
+Is there a parking lot?
+¿Hay estacionamiento?
+
+Yes, we have free parking.
+Sí, tenemos estacionamiento gratuito.
+
+Can you recommend a good restaurant nearby?
+¿Puede recomendar un buen restaurante cercano?
+
+Of course, there’s one just down the street.
+Por supuesto, hay uno justo al final de la calle.
+
+Do you offer airport shuttle service?
+¿Ofrecen servicio de traslado al aeropuerto?
+
+Yes, it’s complimentary.
+Sí, es gratuito.
+
+Can I cancel my reservation?
+¿Puedo cancelar mi reserva?
+
+Yes, but please notify us 24 hours in advance.
+Sí, pero avísenos con 24 horas de antelación.
+
+Is there a safe in the room?
+¿Hay una caja fuerte en la habitación?
+
+Yes, there is.
+Sí, hay.
+
+Can I leave my luggage here after check-out?
+¿Puedo dejar mi equipaje aquí después del check-out?
+
+Yes, we can store it for you.
+Sí, podemos guardarlo para usted.
+
+Does the hotel have a bar?
+¿El hotel tiene un bar?
+
+Yes, it’s on the ground floor.
+Sí, está en la planta baja.
+
+Can you arrange a wake-up call?
+¿Puede organizar una llamada de despertador?
+
+Yes, at what time?
+Sí, ¿a qué hora?
+
+Do you provide laundry service?
+¿Ofrecen servicio de lavandería?
+
+Yes, we do.
+Sí, lo ofrecemos.
+
+Is there a hairdryer in the room?
+¿Hay secador de pelo en la habitación?
+
+Yes, it’s in the bathroom.
+Sí, está en el baño.
+
+Can I upgrade my room?
+¿Puedo mejorar mi habitación?
+
+Yes, for an additional charge.
+Sí, por un cargo adicional.
+
+Does the hotel have an elevator?
+¿El hotel tiene ascensor?
+
+Yes, we have two elevators.
+Sí, tenemos dos ascensores.
+
+Can I get a receipt, please?
+¿Puedo obtener un recibo, por favor?
+
+Of course, here it is.
+Por supuesto, aquí está.
+
+Is the front desk open 24 hours?
+¿Está abierta la recepción las 24 horas?
+
+Yes, it is.
+Sí, lo está.
+
+Do you provide towels?
+¿Proporcionan toallas?
+
+Yes, fresh towels are provided daily.
+Sí, se proporcionan toallas frescas a diario.
+
+Can you arrange a taxi for me?
+¿Puede organizar un taxi para mí?
+
+Yes, just let us know the time.
+Sí, solo avísenos la hora.
+
+Are pets allowed?
+¿Se permiten mascotas?
+
+Yes, we allow small pets.
+Sí, permitimos mascotas pequeñas.
+
+Can I extend my stay?
+¿Puedo extender mi estadía?
+
+Yes, if the room is available.
+Sí, si la habitación está disponible.
+
+Is there a minibar in the room?
+¿Hay minibar en la habitación?
+
+Yes, it’s fully stocked.
+Sí, está completamente surtido.
+
+Do you have connecting rooms?
+¿Tienen habitaciones conectadas?
+
+Yes, we do.
+Sí, las tenemos.
+
+Is there a balcony in the room?
+¿Hay balcón en la habitación?
+
+Some rooms have balconies.
+Algunas habitaciones tienen balcón.
+
+Can I request extra pillows?
+¿Puedo pedir almohadas extra?
+
+Yes, we’ll send them up.
+Sí, se las enviaremos.
+
+Can you recommend tourist attractions?
+¿Puede recomendar atracciones turísticas?
+
+Sure, I’ll give you a map.
+Claro, le daré un mapa.
+
+Is there a concierge service?
+¿Hay servicio de conserjería?
+
+Yes, the concierge is available 24/7.
+Sí, el conserje está disponible las 24 horas.
+
+Can I use the business center?
+¿Puedo usar el centro de negocios?
+
+Yes, it’s on the second floor.
+Sí, está en el segundo piso.
+
+Do you have meeting rooms?
+¿Tienen salas de reuniones?
+
+Yes, we have several.
+Sí, tenemos varias.

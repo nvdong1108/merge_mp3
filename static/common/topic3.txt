@@ -1,0 +1,304 @@
+muc sắm . 
+
+Can I help you?
+¿Puedo ayudarte?
+
+I’m just looking, thank you.
+Solo estoy mirando, gracias.
+
+How much is this?
+¿Cuánto cuesta esto?
+
+It’s $25.
+Cuesta 25 dólares.
+
+Do you have it in another color?
+¿Lo tienes en otro color?
+
+Yes, we have it in blue and red.
+Sí, lo tenemos en azul y rojo.
+
+What size are you?
+¿Qué talla tienes?
+
+I’m a medium.
+Soy talla mediana.
+
+Do you have this in size large?
+¿Tienes esto en talla grande?
+
+Sorry, we’re out of stock.
+Lo siento, no tenemos en existencia.
+
+Can I try it on?
+¿Puedo probármelo?
+
+The fitting rooms are over there.
+Los probadores están allí.
+
+Does it fit?
+¿Te queda bien?
+
+Yes, it fits perfectly.
+Sí, me queda perfecto.
+
+I’ll take it.
+Me lo llevo.
+
+Can I pay by credit card?
+¿Puedo pagar con tarjeta de crédito?
+
+Yes, we accept Visa and Mastercard.
+Sí, aceptamos Visa y Mastercard.
+
+Do you take cash?
+¿Aceptan efectivo?
+
+Yes, we do.
+Sí, lo hacemos.
+
+Can I get a receipt, please?
+¿Puedo obtener un recibo, por favor?
+
+Here’s your receipt.
+Aquí está tu recibo.
+
+Is there a discount on this item?
+¿Hay algún descuento en este artículo?
+
+Yes, it’s 20% off.
+Sí, tiene un 20% de descuento.
+
+Do you have a loyalty card?
+¿Tienes una tarjeta de fidelidad?
+
+No, I don’t.
+No, no tengo.
+
+Can you gift-wrap this?
+¿Puedes envolver esto para regalo?
+
+Of course!
+¡Por supuesto!
+
+Where is the cashier?
+¿Dónde está la caja?
+
+It’s at the front of the store.
+Está al frente de la tienda.
+
+Do you sell shoes here?
+¿Venden zapatos aquí?
+
+Yes, on the second floor.
+Sí, en el segundo piso.
+
+Are there any sales going on?
+¿Hay alguna oferta?
+
+Yes, there’s a sale on jackets.
+Sí, hay una oferta en chaquetas.
+
+What’s the return policy?
+¿Cuál es la política de devoluciones?
+
+You can return it within 30 days.
+Puedes devolverlo dentro de 30 días.
+
+Is this item refundable?
+¿Este artículo es reembolsable?
+
+Yes, with a receipt.
+Sí, con un recibo.
+
+Can I exchange this for a different size?
+¿Puedo cambiar esto por otra talla?
+
+Yes, within 15 days.
+Sí, dentro de 15 días.
+
+Where is the shoe section?
+¿Dónde está la sección de zapatos?
+
+It’s at the back of the store.
+Está al fondo de la tienda.
+
+Do you have this in stock?
+¿Tienen esto en inventario?
+
+Let me check for you.
+Déjame verificarlo para ti.
+
+Are there any promotions today?
+¿Hay promociones hoy?
+
+Yes, buy one, get one free.
+Sí, compra uno y llévate otro gratis.
+
+Do you sell electronics here?
+¿Venden electrónicos aquí?
+
+No, but there’s a store next door.
+No, pero hay una tienda al lado.
+
+Can I see this in a larger size?
+¿Puedo ver esto en una talla más grande?
+
+Of course, one moment.
+Por supuesto, un momento.
+
+Where are the children’s clothes?
+¿Dónde está la ropa de niños?
+
+They’re on the third floor.
+Están en el tercer piso.
+
+Is this on sale?
+¿Esto está en oferta?
+
+Yes, it’s 50% off.
+Sí, tiene un 50% de descuento.
+
+Can I get a bag, please?
+¿Puedo tener una bolsa, por favor?
+
+Sure, here you go.
+Claro, aquí tienes.
+
+Do you sell gift cards?
+¿Venden tarjetas de regalo?
+
+Yes, we do.
+Sí, las vendemos.
+
+What time does the store close?
+¿A qué hora cierra la tienda?
+
+At 9 PM.
+A las 9 PM.
+
+Where can I find women’s clothing?
+¿Dónde puedo encontrar ropa de mujer?
+
+It’s on the first floor.
+Está en el primer piso.
+
+Can I order this online?
+¿Puedo pedir esto en línea?
+
+Yes, we have an online store.
+Sí, tenemos una tienda en línea.
+
+Do you have a catalog?
+¿Tienen un catálogo?
+
+Yes, here it is.
+Sí, aquí está.
+
+What brand is this?
+¿Qué marca es esta?
+
+It’s Nike.
+Es Nike.
+
+Can I see something cheaper?
+¿Puedo ver algo más barato?
+
+Sure, let me show you.
+Claro, déjame mostrarte.
+
+Do you sell accessories?
+¿Venden accesorios?
+
+Yes, we have jewelry and bags.
+Sí, tenemos joyas y bolsos.
+
+Can I pre-order this item?
+¿Puedo reservar este artículo?
+
+Yes, you can.
+Sí, puedes hacerlo.
+
+Do you sell second-hand clothes?
+¿Venden ropa de segunda mano?
+
+No, everything here is new.
+No, todo aquí es nuevo.
+
+What’s the warranty on this product?
+¿Cuál es la garantía de este producto?
+
+It has a one-year warranty.
+Tiene una garantía de un año.
+
+Where is the fitting room?
+¿Dónde está el probador?
+
+It’s on the left.
+Está a la izquierda.
+
+Can you recommend a good gift?
+¿Puedes recomendarme un buen regalo?
+
+How about this perfume?
+¿Qué tal este perfume?
+
+Can I pay in installments?
+¿Puedo pagar en cuotas?
+
+Yes, with no interest.
+Sí, sin intereses.
+
+Is there free delivery?
+¿Hay envío gratis?
+
+Yes, for orders over $50.
+Sí, para pedidos mayores de 50 dólares.
+
+Do you offer international shipping?
+¿Ofrecen envío internacional?
+
+Yes, we do.
+Sí, lo hacemos.
+
+Is there a place to park here?
+¿Hay un lugar para estacionar aquí?
+
+Yes, there’s a parking lot outside.
+Sí, hay un estacionamiento afuera.
+
+Do you have vegan products?
+¿Tienen productos veganos?
+
+Yes, we have a special section.
+Sí, tenemos una sección especial.
+
+Can you hold this for me?
+¿Puedes guardarme esto?
+
+Yes, for 24 hours.
+Sí, por 24 horas.
+
+Where is the home appliances section?
+¿Dónde está la sección de electrodomésticos?
+
+On the ground floor.
+En la planta baja.
+
+Do you have any limited editions?
+¿Tienen ediciones limitadas?
+
+Yes, over there.
+Sí, allá.
+
+Can I return this if it doesn’t fit?
+¿Puedo devolver esto si no me queda?
+
+Yes, within 14 days.
+Sí, dentro de 14 días.
+
+Can you give me a discount?
+¿Me puedes dar un descuento?
+
+I’m sorry, the price is fixed.
+Lo siento, el precio es fijo
