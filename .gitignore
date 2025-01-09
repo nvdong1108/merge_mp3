@@ -34,4 +34,5 @@ static/**/*.mp4
 
 static/project_videos/
 static/tmp/
+static/data.json
 *.mp3
