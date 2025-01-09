@@ -3,6 +3,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 
+
 from pydub import AudioSegment
 from gtts import gTTS
 from tqdm import tqdm
@@ -17,6 +18,7 @@ from controller.common.file_untils import write_to_file, create_folder_new_proje
 import ffmpeg
 import subprocess
 from flask_socketio import SocketIO
+from flask import Flask, request, jsonify
 
 
 change_settings({"IMAGEMAGICK_BINARY": r"C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\magick.exe"})
@@ -131,15 +133,19 @@ def test_(socketio):
         socketio.emit('progress', {'progress': i*10})    
 
 
-def json_to_videos(content,socketio):
+def json_to_videos(content, socketio):
     image_path = r"assets\image\2.png"
     output_folder = create_folder_new_project()
     files_txt_name_videos = os.path.join(output_folder, "filelist.txt")
     total_sentences = len(content)
-    for i,sentence in enumerate(tqdm(content, desc="Processing sentences", unit="sentence")):
-        progress = int((i + 1) / total_sentences * 100)
+
+    for i, sentence in enumerate(content):
+        progress = int(i/total_sentences * 100)
         print(f"\n\n\n=================== >>>>> Progress {progress} ====================================\n\n")
-        # socketio.emit('progress', {'progress': progress}, broadcast=True)
+        
+        socketio.emit('progress', {'progress': progress})    
+        socketio.sleep(1)
+
         path_audio = text_to_speech(sentence, output_folder)
         audio = AudioSegment.from_file(path_audio)
         file_name  =f"{file_name_uuid(i)}"
@@ -163,15 +169,15 @@ def json_to_videos(content,socketio):
 
 def text_to_videos(text, socketio):
     # thực tết 
+    # socketio.sleep(1)
+    # socketio.emit('progress', {'progress': 1})
     json = convert_text_to_json(text)
-    # socketio.emit('progress', {'progress': 1}, broadcast=True)
     # test_(socketio)
-    path = json_to_videos(json,socketio)
-    # socketio.emit('progress', {'progress': 100}, broadcast=True)
-
+    json_to_videos(json,socketio)
+    # Threadtarget=json_to_videos, args=(json, socketio)).start()
+    # Thread(json_to_videos(json,socketio)).start()
+    # socketio.emit('progress', {'progress': 100})
     print("\n\ndone===================================\n\n\n\n")
-    return path
-    # test 
 
     
 

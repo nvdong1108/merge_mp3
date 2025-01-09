@@ -35,34 +35,6 @@ def load_subtitles(file_name):
     return subtitles
 
 
-def process():
-     for i, subtitle in enumerate( subtitles):
-
-            text_en = subtitle['text_en']
-            # print(f"start_time: {subtitle['start']} end time: {end_all_video_time}") 
-            if i == 0:
-                # title 
-                text_clip_en = TextClip(text_en, fontsize=90, color='#d1d155',font='Comic-Sans-MS-Bold', method='caption',size=(screen_width, None))
-                text_clip_en = text_clip_en.set_position(('center',rows),relative=True).set_start(0).set_end(end_all_video_time)
-
-            else:
-
-                if subtitle['speaker'] == "Q":
-                    # rows = rows + space_line
-                    text_clip_en = TextClip(text_en, fontsize=55, color='white',font='Comic-Sans-MS', method='caption', align='West',size=(screen_width*0.99, None))
-                    text_clip_en = text_clip_en.set_position(('left',rows),relative=True).set_start(subtitle['start']).set_end(subtitle['end'])
-                else:
-                    text_clip_en = TextClip(text_en, fontsize=55, color='#d2aedb',font='Comic-Sans-MS-Italic', method='caption', align='East',size=(screen_width*0.99 , None))
-                    text_clip_en = text_clip_en.set_position(('right',rows),relative=True).set_start(subtitle['start']).set_end(subtitle['end'])
-                # answer
-                
-
-            rows = round((rows + (text_clip_en.h / screen_height) ) ,2)
-            print(f"rows = {rows} {text_en}")
-            text_clips.append(text_clip_en)
-            if rows > 0.88:
-                rows = 0.1
-
 def process_video(audio_path, image_path, output_folder, file_name):
     output_path = fr"{output_folder}\{file_name}.mp4"
 

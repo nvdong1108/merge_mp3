@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to Videos</title>
+    <title>Short videos</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
@@ -14,26 +14,26 @@
             <ul>
                 <li><a href="/text-to-speech">Text to Videos</a></li>
                 <li><a href="/short-videos">Short videos</a></li>
-                <li><a href="/subtitle">subtitle</a></li>
             </ul>
         </div>
         <div class="main-content">
-            <h1>Text to Videos</h1>
+            <h1>Short videos</h1>
             <form id="textForm">
                 <textarea id="textInput"  placeholder="Enter your text here..."></textarea>
             <br>
-                <button type="submit">Generate Audio</button>
+                <button type="submit">Generate</button>
             </form>
             <div class="progress-container">
                 <progress id="progressBar" value="0" max="100"></progress>
                 <span id="progressPercent">0%</span>
             </div>
-             <div id="message">
+             <div class="center" id="message">
                 <label id="messageLabel"></label>
             </div>
         </div>
         <div id="dynamic-content">
         </div>
+
     </div>
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
     <script>
@@ -51,7 +51,7 @@
                     return response.text();
                 })
                 .then(html => {
-                    document.getElementById('dynamic-content').innerHTML = html; // Chèn nội dung vào div
+                    document.getElementById('dynamic-content').innerHTML = html; 
                 })
                 .catch(error => {
                     console.error('Error loading HTML:', error);

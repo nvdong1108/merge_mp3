@@ -3,26 +3,28 @@ import os
 from flask_socketio import SocketIO
 import time
 from flask_cors import CORS
+from threading import Thread, Semaphore
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 
-import threading
 from flask import Flask, request, jsonify, render_template, send_from_directory
 from flask_socketio import SocketIO, emit
 from gtts import gTTS
 from controller.audio.text_to_speech import text_to_videos
-
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="http://localhost:5000")
+socketio = SocketIO(app, cors_allowed_origins="http://localhost:5000",async_mode="eventlet")
 
 # socketio = SocketIO(app)
 # socketio = SocketIO(app, cors_allowed_origins="*")  
 # CORS(app, resources={r"/*": {"origins": "*"}})
 # 
+MAX_TASKS = 3
+task_semaphore = Semaphore(MAX_TASKS)
 
 
 
@@ -30,6 +32,15 @@ socketio = SocketIO(app, cors_allowed_origins="http://localhost:5000")
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/text-to-speech')
+def text_to_speech():
+    return render_template('index.html')
+
+
+@app.route('/short-videos')
+def short_videos():
+    return render_template('short-videos.html')
 
 
 @app.route('/templates/<path:filename>')
@@ -84,13 +95,27 @@ folder_path = './static/project_videos/'
 #     except Exception as e:
 #         return jsonify({'error': str(e)}), 500
 
+
+def process_videos(text, socketio):
+    with task_semaphore: 
+        try:
+            text_to_videos(text, socketio)
+        except Exception as e:
+            print(f"Error during video processing: {e}")
+
+
+
 @app.route('/text-to-speech', methods=['POST'])
 def post_text_to_speech():
+
+    if task_semaphore._value == 0:  
+        return jsonify({"message": "Server is busy, please wait for a slot."}), 429
+    
     text = request.get_json()['text']
-    path = text_to_videos(text, socketio)
-    return jsonify({'url': f"http://127.0.0.1:5000/{path}"})
+    Thread(target=process_videos, args=(text, socketio)).start()
 
-
+    return jsonify({"message": f"Video processing started Thread {task_semaphore._value}!"})
+    
 
 
 @app.route('/list-assist-files', methods=['GET'])

@@ -63,18 +63,6 @@ def subtitels_all(audio_path , file_name):
 
     model = whisper.load_model("base")
 
-    # pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization",use_auth_token="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")
-    # diarization = pipeline(audio_path)
-
-    # speaker_segments = []
-    # for turn, _, speaker in diarization.itertracks(yield_label=True):
-    #     speaker_segments.append({
-    #         "start": turn.start,
-    #         "end": turn.end,
-    #         "speaker": speaker
-    #     })
-
-
     result = model.transcribe(audio_path, word_timestamps=True)
     start_time = None
     end_time_audio = result['segments'][-1]['words'][-1]['end']
