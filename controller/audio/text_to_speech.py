@@ -154,6 +154,10 @@ def json_to_videos(content,socketio):
         line_name_vides = f"file '{os.path.abspath(files_videos_output)}'\n"
         write_to_file(files_txt_name_videos, line_name_vides , False)
 
+    # end file 
+    line_name_vides = f"file 'D:\CODE\DONGNV\git\merge_mp3\static\common\the_end.mp4'\n"
+    write_to_file(files_txt_name_videos, line_name_vides , False)
+
     files_result = os.path.join(output_folder, f"result_{file_name_uuid()}.mp4")
     merge_videos(files_txt_name_videos,files_result)
     

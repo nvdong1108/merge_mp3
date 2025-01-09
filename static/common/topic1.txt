@@ -1,0 +1,253 @@
+giới thiệu bản thân
+
+Good morning.
+Buenos días.
+
+Good afternoon.
+Buenas tardes.
+
+Good evening.
+Buenas noches.
+
+How are you?
+¿Cómo estás?
+
+I’m fine, thank you.
+Estoy bien, gracias.
+
+What’s your name?
+¿Cómo te llamas?
+
+My name is Anna.
+Me llamo Anna.
+
+Where are you from?
+¿De dónde eres?
+
+I’m from the United States.
+Soy de los Estados Unidos.
+
+It’s nice to meet you.
+Mucho gusto.
+
+Nice to meet you too.
+El gusto es mío.
+
+How old are you?
+¿Cuántos años tienes?
+
+I’m 25 years old.
+Tengo 25 años.
+
+What do you do?
+¿A qué te dedicas?
+
+I’m a student.
+Soy estudiante.
+
+I work as a teacher.
+Trabajo como maestro/a.
+
+Do you speak English?
+¿Hablas inglés?
+
+Yes, I speak a little English.
+Sí, hablo un poco de inglés.
+
+I don’t speak Spanish well.
+No hablo español muy bien.
+
+Can you help me, please?
+¿Puedes ayudarme, por favor?
+
+Where do you live?
+¿Dónde vives?
+
+I live in New York.
+Vivo en Nueva York.
+
+How long have you lived here?
+¿Cuánto tiempo llevas viviendo aquí?
+
+I’ve lived here for three years.
+Llevo tres años viviendo aquí.
+
+What’s your favorite hobby?
+¿Cuál es tu pasatiempo favorito?
+
+I enjoy reading books.
+Me gusta leer libros.
+
+Do you like traveling?
+¿Te gusta viajar?
+
+Yes, I love traveling.
+Sí, me encanta viajar.
+
+What’s your favorite food?
+¿Cuál es tu comida favorita?
+
+I love pizza.
+Me encanta la pizza.
+
+Do you have any siblings?
+¿Tienes hermanos?
+
+Yes, I have two brothers.
+Sí, tengo dos hermanos.
+
+Are you married?
+¿Estás casado/a?
+
+No, I’m single.
+No, estoy soltero/a.
+
+What’s your phone number?
+¿Cuál es tu número de teléfono?
+
+It’s 123-456-7890.
+Es el 123-456-7890.
+
+What’s your email address?
+¿Cuál es tu correo electrónico?
+
+It’s anna@example.com.
+Es anna@example.com.
+
+Can I call you later?
+¿Puedo llamarte más tarde?
+
+Sure, no problem.
+Claro, no hay problema.
+
+Where did you go to school?
+¿Dónde fuiste a la escuela?
+
+I went to school in Madrid.
+Fui a la escuela en Madrid.
+
+What’s your major?
+¿Cuál es tu especialidad?
+
+I’m studying engineering.
+Estoy estudiando ingeniería.
+
+Do you like music?
+¿Te gusta la música?
+
+Yes, I love listening to jazz.
+Sí, me encanta escuchar jazz.
+
+What’s your favorite color?
+¿Cuál es tu color favorito?
+
+My favorite color is blue.
+Mi color favorito es azul.
+
+Are you busy now?
+¿Estás ocupado/a ahora?
+
+No, I’m free.
+No, estoy libre.
+
+Do you have pets?
+¿Tienes mascotas?
+
+Yes, I have a dog.
+Sí, tengo un perro.
+
+What’s your dog’s name?
+¿Cómo se llama tu perro?
+
+His name is Max.
+Se llama Max.
+
+Do you like sports?
+¿Te gustan los deportes?
+
+Yes, I enjoy playing soccer.
+Sí, me gusta jugar al fútbol.
+
+What do you usually do on weekends?
+¿Qué haces normalmente los fines de semana?
+
+I like to relax and watch movies.
+Me gusta relajarme y ver películas.
+
+What time is it now?
+¿Qué hora es ahora?
+
+It’s 3 PM.
+Son las 3 PM.
+
+Are you a morning person or a night owl?
+¿Eres una persona madrugadora o nocturna?
+
+I’m a night owl.
+Soy una persona nocturna.
+
+Do you like coffee or tea?
+¿Te gusta el café o el té?
+
+I prefer coffee.
+Prefiero el café.
+
+What’s your favorite season?
+¿Cuál es tu estación favorita?
+
+I love summer.
+Me encanta el verano.
+
+Can I introduce you to my friend?
+¿Puedo presentarte a mi amigo/a?
+
+Of course!
+¡Claro!
+
+Where do you usually hang out?
+¿Dónde sueles pasar el rato?
+
+I usually hang out at the park.
+Suelo pasar el rato en el parque.
+
+What’s your favorite movie?
+¿Cuál es tu película favorita?
+
+I love “Inception.”
+Me encanta “Inception”.
+
+Do you watch TV shows?
+¿Ves programas de televisión?
+
+Yes, I enjoy watching comedies.
+Sí, me gusta ver comedias.
+
+Are you learning any languages?
+¿Estás aprendiendo algún idioma?
+
+Yes, I’m learning Spanish.
+Sí, estoy aprendiendo español.
+
+Why are you learning English?
+¿Por qué estás aprendiendo inglés?
+
+I need it for my job.
+Lo necesito para mi trabajo.
+
+How long have you been studying English?
+¿Cuánto tiempo llevas estudiando inglés?
+
+I’ve been studying for two years.
+Llevo estudiando dos años.
+
+Do you have any plans for tonight?
+¿Tienes planes para esta noche?
+
+I’m going out with friends.
+Voy a salir con amigos.
+
+What’s your dream job?
+¿Cuál es tu trabajo soñado?
+
+I want to be a pilot.
+Quiero ser piloto.

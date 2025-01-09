@@ -1,0 +1,260 @@
+ăn uống tại nhà hàng :
+
+
+Do you have a table for two?
+¿Tienen una mesa para dos?
+
+I’d like to make a reservation.
+Me gustaría hacer una reserva.
+
+For what time?
+¿Para qué hora?
+
+For 7 PM, please.
+Para las 7 PM, por favor.
+
+Do you have the menu in English?
+¿Tienen el menú en inglés?
+
+Can we see the menu, please?
+¿Podemos ver el menú, por favor?
+
+What’s today’s special?
+¿Cuál es el especial de hoy?
+
+Can you recommend a dish?
+¿Puede recomendar un plato?
+
+What’s in this dish?
+¿Qué lleva este plato?
+
+Does this dish have nuts?
+¿Este plato lleva nueces?
+
+Is it spicy?
+¿Es picante?
+
+I’d like to order the steak, please.
+Quisiera pedir el bistec, por favor.
+
+How would you like it cooked?
+¿Cómo lo quiere cocido?
+
+Medium rare, please.
+Término medio, por favor.
+
+Can I have the chicken soup as a starter?
+¿Puedo pedir la sopa de pollo como entrada?
+
+What appetizers do you have?
+¿Qué aperitivos tienen?
+
+We have garlic bread and fried calamari.
+Tenemos pan de ajo y calamares fritos.
+
+Do you have vegetarian options?
+¿Tienen opciones vegetarianas?
+
+Yes, we have a vegetarian pasta.
+Sí, tenemos pasta vegetariana.
+
+Can I have a glass of water?
+¿Puedo tener un vaso de agua?
+
+Still or sparkling?
+¿Sin gas o con gas?
+
+I’d like sparkling water, please.
+Quisiera agua con gas, por favor.
+
+Can I get a glass of red wine?
+¿Puedo tomar una copa de vino tinto?
+
+Do you serve beer?
+¿Sirven cerveza?
+
+What kind of beer do you have?
+¿Qué tipo de cerveza tienen?
+
+Do you have a wine list?
+¿Tienen una carta de vinos?
+
+What do you recommend for dessert?
+¿Qué me recomienda para el postre?
+
+Do you have ice cream?
+¿Tienen helado?
+
+I’d like a slice of cheesecake.
+Quisiera una rebanada de tarta de queso.
+
+Can I have the bill, please?
+¿Me puede traer la cuenta, por favor?
+
+Do you take credit cards?
+¿Aceptan tarjetas de crédito?
+
+Is service included?
+¿Está incluido el servicio?
+
+Can I get a receipt, please?
+¿Puedo obtener un recibo, por favor?
+
+Is this table okay?
+¿Está bien esta mesa?
+
+Can we sit outside?
+¿Podemos sentarnos afuera?
+
+I’d like to sit by the window.
+Me gustaría sentarme junto a la ventana.
+
+Do you have high chairs for kids?
+¿Tienen sillas altas para niños?
+
+Is there a kids’ menu?
+¿Hay un menú para niños?
+
+What’s the soup of the day?
+¿Cuál es la sopa del día?
+
+I’m allergic to seafood.
+Soy alérgico/a a los mariscos.
+
+Do you have gluten-free options?
+¿Tienen opciones sin gluten?
+
+Can I have some extra napkins?
+¿Puedo tener servilletas extra?
+
+Can I have some bread, please?
+¿Puedo tener un poco de pan, por favor?
+
+Is there a special occasion?
+¿Hay alguna ocasión especial?
+
+Yes, it’s my birthday.
+Sí, es mi cumpleaños.
+
+Do you offer group discounts?
+¿Ofrecen descuentos para grupos?
+
+Can I split the bill?
+¿Puedo dividir la cuenta?
+
+Do you have a set menu?
+¿Tienen un menú fijo?
+
+How long will the food take?
+¿Cuánto tardará la comida?
+
+What time do you close?
+¿A qué hora cierran?
+
+Can I make a reservation for tomorrow?
+¿Puedo hacer una reserva para mañana?
+
+Does the meal come with a side dish?
+¿La comida viene con un acompañamiento?
+
+What side dishes do you have?
+¿Qué acompañamientos tienen?
+
+I’d like a side of fries.
+Quisiera una guarnición de papas fritas.
+
+Can I have the dressing on the side?
+¿Puedo tener el aderezo aparte?
+
+Can I have my steak well-done?
+¿Puedo tener mi bistec bien cocido?
+
+Do you have any promotions?
+¿Tienen alguna promoción?
+
+Is there a buffet option?
+¿Hay opción de buffet?
+
+Can I have a takeaway box?
+¿Puedo tener una caja para llevar?
+
+What time does breakfast start?
+¿A qué hora comienza el desayuno?
+
+Do you have coffee or tea?
+¿Tienen café o té?
+
+Can I get a cappuccino, please?
+¿Puedo pedir un capuchino, por favor?
+
+Do you serve cocktails?
+¿Sirven cócteles?
+
+What’s your signature dish?
+¿Cuál es su plato estrella?
+
+Is there a dress code?
+¿Hay un código de vestimenta?
+
+What’s the name of this dish?
+¿Cómo se llama este plato?
+
+Can I have a refill, please?
+¿Puedo tener un relleno, por favor?
+
+Do you have vegan dishes?
+¿Tienen platos veganos?
+
+Can I change the side dish?
+¿Puedo cambiar el acompañamiento?
+
+I’d like to order dessert.
+Quisiera pedir postre.
+
+Do you have free Wi-Fi?
+¿Tienen Wi-Fi gratis?
+
+Can you pack this for me?
+¿Puede empacarlo para mí?
+
+Do you charge for water?
+¿Cobran por el agua?
+
+Are pets allowed?
+¿Se permiten mascotas?
+
+What’s your house specialty?
+¿Cuál es la especialidad de la casa?
+
+Can I have extra cheese?
+¿Puedo tener queso extra?
+
+Is it okay to take photos here?
+¿Está bien tomar fotos aquí?
+
+Can I pay in cash?
+¿Puedo pagar en efectivo?
+
+Do you offer delivery service?
+¿Ofrecen servicio de entrega?
+
+Can I cancel my reservation?
+¿Puedo cancelar mi reserva?
+
+Is the chef available to speak?
+¿Está disponible el chef para hablar?
+
+Do you have any spicy dishes?
+¿Tienen platos picantes?
+
+What’s the most popular dish here?
+¿Cuál es el plato más popular aquí?
+
+Is there live music here?
+¿Hay música en vivo aquí?
+
+Do you have outdoor seating?
+¿Tienen asientos al aire libre?
+
+Is there a service charge?
+¿Hay un cargo por servicio?
